@@ -18,16 +18,12 @@ body{
     }
     ol{
       font-family: 'Do Hyeon', sans-serif;
-      border-right:1px solid gray;
-      text-align: center;
-      font-size: 30px;
-      width:100px;
-      margin:0;
-      padding:15px;
-      line-height: 100px;
     }
     .mean{
       font-family: 'Poor Story', cursive;
+    }
+    .treemean{
+      font-family: 'Yeon Sung', cursive;
     }
     #treeworld h1{
       font-size:85px;
@@ -36,22 +32,30 @@ body{
       margin:0;
       padding:40px;
     }
-    #grid ol{
-      padding-left:50PX;
+    .grid li{
+      display: inline;
     }
-    #grid{
-      display: grid;
-      grid-template-columns: 150px 1fr;
+    .grid ol{
+      text-align: center;
+      border-bottom:1px solid gray;
+      list-style-type: none;
+      font-size: 30px;
+      padding:10px;
+      display: inline-block;
+      margin: 0;
+      word-spacing: 50px;
+    }
+    #last{
+      border-right: none;
+    }
+    .grid{
+      grid-template-rows: 150px 1fr;
+      width:100%
     }
     #SK1{
       padding-left: 45px;
+      padding-top: 50px;
     }
-    @font-face {
-      font-family:"BMJUA_ttf";
-      src:url("BMJUA_ttf");
-      font-family:"BMDo Hyun_ttf";
-      src:url("BMDo Hyun_ttf");
-      }
     @media(max-width:800px){
       #grid{
         display: block;
