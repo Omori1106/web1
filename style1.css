@@ -37,20 +37,19 @@ body{
       padding:40px;
     }
     #topMenu{
-      margin-top: 0;
-      height: 35px;
-      width: 1500px;
+      margin:0;
+      height: 30px;
+      width: 1200px;
     }
     #topMenu ul li{
       list-style: none;
       color: orange;
       background-color: white;
+      line-height: 30px;
+      padding-bottom: 10px;
       float: left;
-      line-height: 40px;
       vertical-align: middle;
       text-align: center;
-      padding-bottom: 10px;
-      border-bottom:1px solid gray;
       position: relative;
     }
     #topMenu .stick{
@@ -61,18 +60,19 @@ body{
       text-decoration: none;
       display: block;
       width: 160px;
-      font-size: 12px;
+      font-size: 18px;
       font-family: 'Do Hyeon', sans-serif;
     }
     .submenuLink{
       color: darkgray;
       background-color: white;
       border: solid 1px gray;
-      margin-top: -1px;
+      margin-top: -12px;
     }
     .submenu{
       position: absolute;
       height: 0px;
+      margin-top: 10px;
       overflow: hidden;
       transition: height .2s;
     }
@@ -89,7 +89,7 @@ body{
       background-color: powderblue;
     }
     .topMenuLi:hover .submenu{
-      height:40px;
+      height:1000px;
     }
     #SK1{
       padding-left: 45px;
