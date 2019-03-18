@@ -9,6 +9,9 @@ h1 {
   color:yellowgreen;
   text-decoration: none;
 }
+#top{
+  display: none;
+}
 body{
       margin:0;
     }
@@ -16,8 +19,9 @@ body{
       color:orange;
       text-decoration: none;
     }
-    ol{
-      font-family: 'Do Hyeon', sans-serif;
+    .active{
+      color:darkorange;
+      text-decoration: none;
     }
     .mean{
       font-family: 'Poor Story', cursive;
@@ -32,34 +36,65 @@ body{
       margin:0;
       padding:40px;
     }
-    .grid li{
-      display: inline;
+    #topMenu{
+      margin-top: 0;
+      height: 35px;
+      width: 1500px;
     }
-    .grid ol{
+    #topMenu ul li{
+      list-style: none;
+      color: orange;
+      background-color: white;
+      float: left;
+      line-height: 40px;
+      vertical-align: middle;
       text-align: center;
+      padding-bottom: 10px;
       border-bottom:1px solid gray;
-      list-style-type: none;
-      font-size: 30px;
-      padding:10px;
-      display: inline-block;
-      margin: 0;
-      word-spacing: 50px;
+      position: relative;
     }
-    #last{
-      border-right: none;
+    #topMenu .stick{
+      color: darkorange;
+      font-size:15px;
     }
-    .grid{
-      grid-template-rows: 150px 1fr;
-      width:100%
+    #topMenu .submenuLink{
+      text-decoration: none;
+      display: block;
+      width: 160px;
+      font-size: 12px;
+      font-family: 'Do Hyeon', sans-serif;
+    }
+    .submenuLink{
+      color: darkgray;
+      background-color: white;
+      border: solid 1px gray;
+      margin-top: -1px;
+    }
+    .submenu{
+      position: absolute;
+      height: 0px;
+      overflow: hidden;
+      transition: height .2s;
+    }
+    #topMenu .menuLink{
+      text-decoration: none;
+      color: orange;
+      display: block;
+      width:160px;
+      font-size: 35px;
+      font-family: 'Do Hyeon', sans-serif;
+    }
+    #topMenu .menuLink:hover{
+      color: coral;
+      background-color: powderblue;
+    }
+    .topMenuLi:hover .submenu{
+      height:40px;
     }
     #SK1{
       padding-left: 45px;
-      padding-top: 50px;
+      padding-top: 0px;
     }
-    @media(max-width:800px){
-      #grid{
-        display: block;
-      }
       ol{
         border-right:none;
       }
