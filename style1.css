@@ -10,13 +10,38 @@ h1 {
   text-decoration: none;
 }
 #top{
-  display: none;
+  position: absolute;
+  right:150px;
+  top:15px;
+  background-color: #FFE5C2;
+  width: 200px;
+}
+#top li{
+  list-style: none;
+  float:left;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size:12px;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 20px;
+}
+.language{
+  margin:0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#top li .actlan{
+  color: black;
+  text-decoration: underline;
+}
+#top li .noactlan{
+  color: #353535;
+  text-decoration: none;
 }
 body{
       margin:0;
     }
     a {
-      color:orange;
       text-decoration: none;
     }
     .active{
@@ -32,21 +57,25 @@ body{
     #treeworld h1{
       font-size:85px;
       text-align: center;
-      border-bottom:1px solid gray;
       margin:0;
       padding:40px;
     }
     #topMenu{
       margin:0;
-      height: 30px;
-      width: 1200px;
+      height: 45px;
+      position: relative;
+      line-height:44px;
+    }
+    #topMenu ul{
+      margin: 0;
+      padding:0;
+      display: inline-block;
+      vertical-align: middle;
     }
     #topMenu ul li{
       list-style: none;
       color: orange;
-      background-color: white;
-      line-height: 30px;
-      padding-bottom: 10px;
+      background-color: #86E57F;
       float: left;
       vertical-align: middle;
       text-align: center;
@@ -64,17 +93,23 @@ body{
       font-family: 'Do Hyeon', sans-serif;
     }
     .submenuLink{
+      display: block;
       color: darkgray;
       background-color: white;
       border: solid 1px gray;
-      margin-top: -12px;
+      margin-top: -1px;
+      height:35px;
+      padding:0;
     }
     .submenu{
       position: absolute;
       height: 0px;
-      margin-top: 10px;
+      margin-top: 0px;
       overflow: hidden;
       transition: height .2s;
+      padding:0;
+      display: inline-block;
+      vertical-align: top;
     }
     #topMenu .menuLink{
       text-decoration: none;
@@ -88,10 +123,14 @@ body{
       color: coral;
       background-color: powderblue;
     }
+    .submenuLink:hover{
+      color:lightblue;
+    }
     .topMenuLi:hover .submenu{
       height:1000px;
     }
     #SK1{
+      position:
       padding-left: 45px;
       padding-top: 0px;
     }

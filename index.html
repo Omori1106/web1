@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>TreeWorld - 나무세상</title>
     <link rel="stylesheet" href="style1.css">
-    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Jua|Poor+Story|Yeon+Sung" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Jua|Poor+Story|Yeon+Sung|Nanum+Gothic" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136329220-1"></script>
 <script>
@@ -15,7 +15,7 @@
   gtag('config', 'UA-136329220-1');
 
 
-  }
+  
 </script>
 <script src="menu.js"></script>
   </head>
@@ -26,11 +26,13 @@
     </div>
     <div id=top>
       <ul class="language">
-        <li>한국어</li>
-        <li>中文</li>
-        <li>日本語</li>
-        <li>English</li>
-        <li>العربية</li>
+        <li><a href="#" class="actlan">한국어</a></li>
+        <li>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+        <li><a href="#" class="noactlan" onclick="alert('지원되지 않는 언어입니다 :(\nNot supported!')" on>中文</a></li>
+        <li>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+        <li><a href="#" class="noactlan" onclick="alert('지원되지 않는 언어입니다 :(\nNot supported!')" on>日本語</a></li>
+        <li>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+        <li><a href="#" class="noactlan" onclick="alert('지원되지 않는 언어입니다 :(\nNot supported!')" on>English</a></li>
       </ul>
     </div>
   <nav id=topMenu>
@@ -54,11 +56,32 @@
         </ul>
       </li>
       <li><a class="stick">|</a></li>
-      <li><a class="menuLink" href="#">단풍나무</a></li>
+      <li class="topMenuLi">
+      <a class="menuLink" href="#">단풍나무</a>
+      <ul class="submenu">
+        <li><a class="submenuLink">GGGG</a></li>
+        <li><a class="submenuLink">HHHH</a></li>
+        <li><a class="submenuLink">IIII</a></li>
+        </ul>
+        </li>
       <li><a class="stick">|</a></li>
-      <li><a class="menuLink" href="#">은행나무</a></li>
+      <li class="topMenuLi">
+      <a class="menuLink" href="#">은행나무</a>
+      <ul class="submenu">
+        <li><a class="submenuLink">JJJJ</a></li>
+        <li><a class="submenuLink">KKKK</a></li>
+        <li><a class="submenuLink">LLLL</a></li>
+        </ul>
+      </li>
       <li><a class="stick">|</a></li>
-      <li><a class="menuLink" href="#">치킨나무</a></li>
+      <li class="topMenuLi">
+      <a class="menuLink" href="#">치킨나무</a>
+      <ul class="submenu">
+        <li><a class="submenuLink">닭다리</a></li>
+        <li><a class="submenuLink">닭날개</a></li>
+        <li><a class="submenuLink">닭모가지</a></li>
+        </ul>
+      </li>
     </ul>
   </center>
   </nav>
