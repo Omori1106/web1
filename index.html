@@ -17,6 +17,7 @@
 
 
 </script>
+<script src="audio.js"></script>
   </head>
   <body>
     <div id=treeworld>
@@ -51,7 +52,7 @@
       <ul class="submenu">
         <li><a class="submenuLink">DDDD</a></li>
         <li><a class="submenuLink">EEEE</a></li>
-        <li><a href="FFFF.html" class="submenuLink">FFFF</a></li>
+        <li><a href="FFFF.html" class="submenuLink">비례식_계산기</a></li>
         </ul>
       </li>
       <li><a class="stick">|</a></li>
@@ -109,6 +110,13 @@
             <br>[TIP!] 오모리가 누군지 궁금하면 단풍나무를 깨물어보세요.<br>
             <br>오모리김치찌개 이미지 보기 → <a href="https://c11.kr/66ha">#클릭</a>
           </p>
+          <div class=bgm>
+              <input type="button" value="▶" onclick="play()" />
+              <input type="button" value="||" onclick="pause()" />
+              <input type="button" value="■" onclick="stop()" />
+              <progress value="0" id="progress"></progress>
+              <span id="current"></span> 초/ <span id="total"></span> 초
+          </div>
           <br><br><br><br>Copyright 2019. <strong>omori</strong> all right reserved.
         </center>
         </div>

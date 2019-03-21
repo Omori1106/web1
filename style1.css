@@ -9,6 +9,11 @@ h1 {
   color:yellowgreen;
   text-decoration: none;
 }
+.bgm{
+  position: absolute;
+  top:15px;
+  left:200px;
+}
 #top{
   position: absolute;
   right:150px;

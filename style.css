@@ -1,6 +1,15 @@
 h1 {
   font-family: 'Jua', sans-serif;
 }
+#display{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size:30px;
+}
+.bgm{
+  position: absolute;
+  top:15px;
+  left:200px;
+}
 .tree{
   color:#6EE3F7;
   text-decoration: none;
