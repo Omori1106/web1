@@ -11,11 +11,12 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-136329220-1');
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="nightDaybutton.js"></script>
+<script src="audio.js"></script>
+<script src="calc.js"></script>
 </head>
 <body>
   <div id=treeworld>
@@ -48,9 +49,9 @@
     <li class="topMenuLi">
     <a class="menuLink" href="#">포도나무</a>
     <ul class="submenu">
-      <li><a href="DDDD.html" class="submenuLink">야구스텟_계산기</a></li>
+      <li><a class="submenuLink">DDDD</a></li>
       <li><a class="submenuLink">EEEE</a></li>
-      <li><a href="FFFF.html" class="submenuLink">FFFF</a></li>
+      <li><a class="submenuLink">비례식_계산기</a></li>
       </ul>
     </li>
     <li><a class="stick">|</a></li>
@@ -87,22 +88,60 @@
   <div id="SK1">
     <center>
       <br><br>
-      <h1>AAAA</h1>
+      <h1>포도나무를 깨물자</h1>
       <p>
         <div class=treemean>
-        <h2>AAAA 페이지</h2>
+        <h2>#야구스텟_계산기</h2>
       <div class=mean>
-        <br>AAAA 내용
-      </p>
-      <p>
-        <div class=treemean>
-        <h2><strong>AAAA</strong> 페이지 소개</h2>
-      </div>
-      <div class=mean>
-        나무의, 나무를 위한, 나무에 의한 페이지입니다.
-        <br>asdf
-        <br>오모리김치찌개 이미지 보기 → <a href="https://c11.kr/66ha">#클릭</a>
-      </p>
+        <br>야구의 기본적인 비율스텟들을 계산해주는 페이지입니다.
+        <br>각 항목을 입력하면 타율, 출루율, 장타율, OPS 등이 표출됩니다.
+        <br><br>[TIP] 이 사이트의 계산 기능을 이용하는 것 보다 여러분이 직접 계산기 두들기는게 더 빠를 수도 있습니다.
+        <br><br>[TIP] 안타 수는 1루타+2루타+3루타+홈런의 갯수를 말합니다.
+        <br><br>[TIP] 타율만 계산하실 거라면 타수+안타만 입력하시면 됩니다. 이 때 나머지 스텟의 값은 0으로 처리됩니다.
+        <br><br><br><a id="display">
+        <input type="text" id="num1" placeholder="타수" size="5">&ensp;
+        <input type="text" id="num2" placeholder="안타" size="5">&ensp;
+        <input type="text" id="num3" placeholder="2루타" size="5">&ensp;
+        <input type="text" id="num4" placeholder="3루타" size="5">&ensp;
+        <input type="text" id="num5" placeholder="홈런" size="5">&ensp;
+        <br>
+        <input type="text" id="num6" placeholder="볼넷" size="5">&ensp;
+        <input type="text" id="num7" placeholder="데드볼" size="5">&ensp;
+        <input type="text" id="num8" placeholder="희생플라이" size="5">&ensp;
+        <br><br><button id="action">계산하기</button></a>
+        <script type="text/javascript">
+          action.onclick = function(){
+            alert("계산이 완료되었습니다 :)");
+            var n1 = parseInt(num1.value);
+            var n2 = parseInt(num2.value);
+            var n3 = parseInt(num3.value);
+            var n4 = parseInt(num4.value);
+            var n5 = parseInt(num5.value);
+            var n6 = parseInt(num6.value);
+            var n7 = parseInt(num7.value);
+            var n8 = parseInt(num8.value);
+            result(n1,n2,n3,n4,n5,n6,n7,n8);
+          }
+
+          function result(n1, n2, n3, n4, n5, n6, n7, n8){
+            var avg = n2/n1;
+            var obp1 = n2 + n6 + n7;
+            var obp2 = n1 + n6 + n7 + n8;
+            var obp = obp1/obp2;
+            var dt = n2-n3-n4-n5;
+            var slg = (dt+n3*2+n4*3+n5*4)/n1;
+            var ops = obp + slg ;
+            var text = "타율 : "+avg+"<br>출루율 : "+obp+"<br>장타율 : "+slg+"<br>OPS : "+ops ;
+            display.innerHTML = text;
+          }
+        </script>
+        <div class=bgm>
+            <input type="button" value="▶" onclick="play()" />
+            <input type="button" value="||" onclick="pause()" />
+            <input type="button" value="■" onclick="stop()" />
+            <progress value="0" id="progress"></progress>
+            <span id="current"></span> 초/ <span id="total"></span> 초
+        </div>
       <br><br><br><br>Copyright 2019. <strong>omori</strong> all right reserved.
     </center>
     </div>
