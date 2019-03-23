@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TreeWorld - 나무세상</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Jua|Poor+Story|Yeon+Sung|Nanum+Gothic" rel="stylesheet">
+
+  <meta charset="utf-8"><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136329220-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-136329220-1');
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="nightDaybutton.js"></script>
+<script src="audio.js"></script>
+<script src="calc.js"></script>
+</head>
+<body>
+  <div id=treeworld>
+  <h1><a href="index.html" class="tree">TreeWorld -
+    <a href="index.html" class="world">나무세상</a></h1>
+  </div>
+  <div id=top>
+    <ul class="language">
+      <li><a href="#" class="actlan">한국어</a></li>
+      <li>&ensp;|&ensp;</li>
+      <li><a href="#" class="noactlan" onclick="alert('지원되지 않는 언어입니다 :(\nNot supported!')" on>中文</a></li>
+      <li>&ensp;|&ensp;</li>
+      <li><a href="#" class="noactlan" onclick="alert('지원되지 않는 언어입니다 :(\nNot supported!')" on>日本語</a></li>
+      <li>&ensp;|&ensp;</li>
+      <li><a href="#" class="noactlan" onclick="alert('지원되지 않는 언어입니다 :(\nNot supported!')" on>English</a></li>
+    </ul>
+  </div>
+<nav id=topMenu>
+  <center>
+  <ul>
+    <li class="topMenuLi">
+    <a class="menuLink" href="#">사과나무</a>
+    <ul class="submenu">
+      <li><a href="1.html" class="submenuLink">AAAA</a></li>
+      <li><a class="submenuLink">BBBB</a></li>
+      <li><a class="submenuLink">CCCC</a></li>
+      </ul>
+    </li>
+    <li><a class="stick">|</a></li>
+    <li class="topMenuLi">
+    <a class="menuLink" href="#">포도나무</a>
+    <ul class="submenu">
+      <li><a href="DDDD.html" class="submenuLink">야구스텟_계산기(1)</a></li>
+      <li><a href="EEEE.html" class="submenuLink">야구스텟_계산기(2)</a></li>
+      <li><a class="submenuLink">비례식_계산기</a></li>
+      </ul>
+    </li>
+    <li><a class="stick">|</a></li>
+    <li class="topMenuLi">
+    <a class="menuLink" href="#">단풍나무</a>
+    <ul class="submenu">
+      <li><a class="submenuLink">GGGG</a></li>
+      <li><a class="submenuLink">HHHH</a></li>
+      <li><a class="submenuLink">IIII</a></li>
+      </ul>
+      </li>
+    <li><a class="stick">|</a></li>
+    <li class="topMenuLi">
+    <a class="menuLink" href="#">은행나무</a>
+    <ul class="submenu">
+      <li><a class="submenuLink">JJJJ</a></li>
+      <li><a class="submenuLink">KKKK</a></li>
+      <li><a class="submenuLink">LLLL</a></li>
+      </ul>
+    </li>
+    <li><a class="stick">|</a></li>
+    <li class="topMenuLi">
+    <a class="menuLink" href="#">치킨나무</a>
+    <ul class="submenu">
+      <li><a class="submenuLink">닭다리</a></li>
+      <li><a class="submenuLink">닭날개</a></li>
+      <li><a class="submenuLink">닭모가지</a></li>
+      </ul>
+    </li>
+  </ul>
+</center>
+</nav>
+<div id="SK1">
+  <div id="SK1">
+    <center>
+      <br><br>
+      <h1>포도나무를 깨물자</h1>
+      <p>
+        <div class=treemean>
+        <h2>#야구스텟_계산기 #수비편_투수</h2>
+      <div class=mean>
+        <br>야구의 투수의 기본적인 스텟들을 계산해주는 페이지입니다.
+        <br>각 항목을 입력하면 ERA, WHIP, K/9, K/BB가 표출됩니다.
+        <br><br>[TIP] ERA=평균자책점. WHIP=이닝당 안타+볼넷 허용률, K/9=9이닝당 탈삼진, K/BB=탈삼진/볼넷
+        <br>[TIP] 평균자책점만 계산하실 거라면 이닝+자책점만 입력하시면 됩니다.
+        <br>[TIP] 타율과 장타율만 계산하실 거라면 윗줄의 텍스트창만 입력하시면 됩니다.
+        <br><br><br><a id="display">
+        <input type="text" id="num1" placeholder="이닝" size="5">&ensp;
+        <input type="text" id="num2" placeholder="자책점" size="5">&ensp;
+        <input type="text" id="num3" placeholder="피안타" size="5">&ensp;
+        <input type="text" id="num4" placeholder="볼넷" size="5">&ensp;
+        <input type="text" id="num5" placeholder="삼진" size="5">&ensp;
+        <input type="text" id="num6" placeholder="고의4구" size="5">
+        <br><br><button id="action">계산하기</button></a>
+
+        <script type="text/javascript">
+          action.onclick = function(){
+            alert("계산이 완료되었습니다 :)");
+            var n = parseInt(num1.value);
+            var er = parseInt(num2.value);
+            var h = parseInt(num3.value);
+            var bb = parseInt(num4.value);
+            var k = parseInt(num5.value);
+            var ibb = parseInt(num6.value);
+            result(n,er,h,bb,k,ibb);
+          }
+
+          function result(n,er,h,bb,k,ibb){
+            var era = er*9/n;
+            var whip = (h+bb)/n;
+            var ka = k/n*9;
+            var kb = k/bb;
+            var text = "평균자책점 : "+era.toFixed(2)+"<br>WHIP : "+whip.toFixed(2)+
+            "<br>K/9 : "+ka.toFixed(2)+"<br>K/BB : "+kb.toFixed(2);
+            display.innerHTML = text;
+          }
+        </script>
+        <p><br><br><br>
+          <div class=treemean>
+          <h2>#야구스텟_계산기 #수비편_수비</h2>
+        <div class=mean>
+          <br>야구의 수비의 기본적인 스텟들을 계산해주는 페이지입니다.
+          <br>각 항목을 입력하면 수비율, 도루저지율이 표출됩니다.
+          <br><br>[TIP] 수비율은 자살+보살+실책을 기록하고, 도루저지율은 도루허용+도루저지를 기록하시기 바랍니다.
+          <br>[TIP] 자살: 타자나 주자를 아웃시킨 최종적인 야수에게 주는 기록, 보살: 아웃시킨 과정에 있는 야수에게 주는 기록.
+          <br><br><br><a id="displayee">
+          <input type="text" id="anum1" placeholder="자살" size="5">&ensp;
+          <input type="text" id="anum2" placeholder="보살" size="5">&ensp;
+          <input type="text" id="anum3" placeholder="실책" size="5">
+          <br>
+          <input type="text" id="anum4" placeholder="도루허용" size="5">&ensp;
+          <input type="text" id="anum5" placeholder="도루저지" size="5">
+          <br><br><button id="calc">계산하기</button></a>
+
+          <script type="text/javascript">
+            calc.onclick = function(){
+              alert("계산이 완료되었습니다 :)");
+              var po = parseInt(anum1.value);
+              var a = parseInt(anum2.value);
+              var e = parseInt(anum3.value);
+              var sb = parseInt(anum4.value);
+              var cs = parseInt(anum5.value);
+              resulttt(po,a,e,cs,sb);
+            }
+
+            function resulttt(po,a,e,cs,sb){
+              var def = (po+a)/(po+a+e);
+              var doru = cs / (cs+sb);
+              var text = "수비율 : "+def.toFixed(3)+"<br>도루저지율 : "+doru.toFixed(3);
+              displayee.innerHTML = text;
+            }
+          </script>
+          <div class=bgm>
+              <input type="button" value="▶" onclick="play()" />
+              <input type="button" value="||" onclick="pause()" />
+              <input type="button" value="■" onclick="stop()" />
+              <progress value="0" id="progress"></progress>
+              <span id="current"></span> 초/ <span id="total"></span> 초
+          </div>
+          <br><br><br><br>Copyright 2019. <strong>omori</strong> all right reserved.
+          </center>
+          </div>
+          </div>
+          </body>
+          </html>

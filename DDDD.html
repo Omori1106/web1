@@ -49,8 +49,8 @@
     <li class="topMenuLi">
     <a class="menuLink" href="#">포도나무</a>
     <ul class="submenu">
-      <li><a class="submenuLink">DDDD</a></li>
-      <li><a class="submenuLink">EEEE</a></li>
+      <li><a href="DDDD.html" class="submenuLink">야구스텟_계산기(1)</a></li>
+      <li><a href="EEEE.html" class="submenuLink">야구스텟_계산기(2)</a></li>
       <li><a class="submenuLink">비례식_계산기</a></li>
       </ul>
     </li>
@@ -91,24 +91,26 @@
       <h1>포도나무를 깨물자</h1>
       <p>
         <div class=treemean>
-        <h2>#야구스텟_계산기</h2>
+        <h2>#야구스텟_계산기 #공격편_기본</h2>
       <div class=mean>
-        <br>야구의 기본적인 비율스텟들을 계산해주는 페이지입니다.
-        <br>각 항목을 입력하면 타율, 출루율, 장타율, OPS 등이 표출됩니다.
-        <br><br>[TIP] 이 사이트의 계산 기능을 이용하는 것 보다 여러분이 직접 계산기 두들기는게 더 빠를 수도 있습니다.
+        <br>야구의 타자의 기본적인 비율스텟들을 계산해주는 페이지입니다.
+        <br>각 항목을 입력하면 타율, 출루율, 장타율, OPS가 표출됩니다.
         <br><br>[TIP] 안타 수는 1루타+2루타+3루타+홈런의 갯수를 말합니다.
-        <br><br>[TIP] 타율만 계산하실 거라면 타수+안타만 입력하시면 됩니다. 이 때 나머지 스텟의 값은 0으로 처리됩니다.
+        <br>[TIP] 타율만 계산하실 거라면 타수+안타만 입력하시면 됩니다.
+        <br>[TIP] 타율과 장타율만 계산하실 거라면 윗줄의 텍스트창만 입력하시면 됩니다.
         <br><br><br><a id="display">
         <input type="text" id="num1" placeholder="타수" size="5">&ensp;
         <input type="text" id="num2" placeholder="안타" size="5">&ensp;
         <input type="text" id="num3" placeholder="2루타" size="5">&ensp;
         <input type="text" id="num4" placeholder="3루타" size="5">&ensp;
-        <input type="text" id="num5" placeholder="홈런" size="5">&ensp;
+        <input type="text" id="num5" placeholder="홈런" size="5">
         <br>
         <input type="text" id="num6" placeholder="볼넷" size="5">&ensp;
         <input type="text" id="num7" placeholder="데드볼" size="5">&ensp;
         <input type="text" id="num8" placeholder="희생플라이" size="5">&ensp;
+        <input type="text" id="num9" placeholder="삼진" size="5">
         <br><br><button id="action">계산하기</button></a>
+
         <script type="text/javascript">
           action.onclick = function(){
             alert("계산이 완료되었습니다 :)");
@@ -120,10 +122,11 @@
             var n6 = parseInt(num6.value);
             var n7 = parseInt(num7.value);
             var n8 = parseInt(num8.value);
-            result(n1,n2,n3,n4,n5,n6,n7,n8);
+            var n9 = parseInt(num9.value);
+            result(n1,n2,n3,n4,n5,n6,n7,n8, n9);
           }
 
-          function result(n1, n2, n3, n4, n5, n6, n7, n8){
+          function result(n1, n2, n3, n4, n5, n6, n7, n8, n9){
             var avg = n2/n1;
             var obp1 = n2 + n6 + n7;
             var obp2 = n1 + n6 + n7 + n8;
@@ -131,10 +134,91 @@
             var dt = n2-n3-n4-n5;
             var slg = (dt+n3*2+n4*3+n5*4)/n1;
             var ops = obp + slg ;
-            var text = "타율 : "+avg+"<br>출루율 : "+obp+"<br>장타율 : "+slg+"<br>OPS : "+ops ;
+            var bbk = n6/n9;
+            var text = "타율 : "+avg.toFixed(3)+"<br>출루율 : "+obp.toFixed(3)+
+            "<br>장타율 : "+slg.toFixed(3)+"<br>OPS : "+ops.toFixed(3)+
+            "<br>BB/K : "+bbk.toFixed(2) ;
             display.innerHTML = text;
           }
         </script>
+        <p><br><br><br>
+          <div class=treemean>
+          <h2>#야구스텟_계산기 #공격편_심화</h2>
+        <div class=mean>
+          <br>야구의 타자의 생소한 비율스텟들을 계산해주는 페이지입니다.
+          <br>각 항목을 입력하면 RC, IsoP, IsoD, wOBA, XR 등이 표출됩니다.
+          <br><br>[TIP] 항목들의 세부 정보는 초록창에 검색하세요. 이 사이트도 초록초록하긴 한데 알 게 뭐야
+          <br>[TIP] 아직 오류가 많으며 개발 중입니다. + 일부 수식이 오차가 있을 수 있습니다.
+          <br>[TIP] 사실 제작자도 RC, XR같은 스텟 뭔지 모릅니다.
+          <br><br><br><a id="displayee">
+          <input type="text" id="anum1" placeholder="타수" size="5">&ensp;
+          <input type="text" id="anum2" placeholder="안타" size="5">&ensp;
+          <input type="text" id="anum3" placeholder="2루타" size="5">&ensp;
+          <input type="text" id="anum4" placeholder="3루타" size="5">&ensp;
+          <input type="text" id="anum5" placeholder="홈런" size="5">
+          <br>
+          <input type="text" id="anum6" placeholder="볼넷" size="5">&ensp;
+          <input type="text" id="anum7" placeholder="데드볼" size="5">&ensp;
+          <input type="text" id="anum8" placeholder="희생플라이" size="5">&ensp;
+          <input type="text" id="anum9" placeholder="삼진" size="5">&ensp;
+          <input type="text" id="anum10" placeholder="고의4구" size="5">
+          <br>
+          <input type="text" id="anum11" placeholder="도루성공" size="5">&ensp;
+          <input type="text" id="anum12" placeholder="도루실패" size="5">&ensp;
+          <input type="text" id="anum13" placeholder="병살타" size="5">&ensp;
+          <input type="text" id="anum14" placeholder="희생번트" size="5">&ensp;
+          <input type="text" id="anum15" placeholder="희생타" size="5">
+          <br><br><button id="calc">계산하기</button></a>
+          <script>
+            calc.onclick = function(){
+              alert("계산이 완료되었습니다 :)");
+              var ab = parseInt(anum1.value);
+              var h = parseInt(anum2.value);
+              var yee = parseInt(anum3.value);
+              var tri = parseInt(anum4.value);
+              var hr = parseInt(anum5.value);
+              var bb = parseInt(anum6.value);
+              var hbp = parseInt(anum7.value);
+              var sf = parseInt(anum8.value);
+              var k = parseInt(anum9.value);
+              var ibb = parseInt(anum10.value);
+              var safe = parseInt(anum11.value);
+              var out = parseInt(anum12.value);
+              var dp = parseInt(anum13.value);
+              var sbunt = parseInt(anum14.value);
+              var sh = parseInt(anum15.value);
+              resulttt(ab,h,yee,tri,hr,bb,hbp,sf,k,ibb,safe,out,dp,sbunt,sh);
+            }
+
+            function resulttt(ab, h, yee, tri, hr, bb, hbp, sf, k,ibb,safe,out,dp,sbunt,sh){
+              var avgavg = h/ab;
+              var aobp1 = h + bb + hbp;
+              var aobp2 = ab + bb + hbp + sf;
+              var aobp = aobp1/aobp2;
+              var adt = h-yee-tri-hr;
+              var aslg = (adt+yee*2+tri*3+hr*4)/ab;
+              var aops = aobp + aslg ;
+              var sb = (safe/(safe+out)) * 100;
+              var arc = h+bb+hbp-out-dp;
+              var brc = (1.125*adt)+(1.69*yee)+(3.02*tri)+(3.73*hr)+0.29*(bb-ibb+hbp)+0.492*(sh+sf+sbunt)-0.4*k;
+              var crc = ab+bb+hbp+sbunt+sf
+              var rc = (((2.4*crc+arc)*(3*crc+brc))/(9*crc))-0.9*crc;
+              var o = ab-h+out+dp+sh+sf;
+              var rrc = rc/o*27;
+              var isop = aslg-avgavg;
+              var isod = aobp-avgavg;
+              var woba = (0.691*(bb-ibb)+0.722*hbp+0.884*adt+1.257*yee+
+              1.593*tri+2.058*hr)/(ab+bb-ibb+sf+hbp);
+              var xr = adt*0.5+yee*0.72+tri*1.04+hr*1.44+(hbp+bb-ibb)*0.34+ibb*0.25
+              +safe*0.18-out*0.32-(ab-h-k)*0.09-k*0.098-dp*0.37+sf*0.37+sbunt*0.04;
+              var gpa = (1.8*aobp+aslg)/4;
+              var psn = (2*hr*safe)/(hr+safe);
+              var texttt = "RC : "+rc.toFixed(2)+"<br>RC/27 : "+rrc.toFixed(2)+"<br>IsoP : "+isop.toFixed(3)+"<br>IsoD : "+isod.toFixed(3)+
+              "<br>XR : "+xr.toFixed(2)+"<br>wOBA : "+woba.toFixed(3)+"<br>도루성공률 : "+sb.toFixed(1)+("%")+
+              "<br>GPA : "+gpa.toFixed(3)+"<br>PSN : "+psn.toFixed(2) ;
+              displayee.innerHTML = texttt;
+            }
+            </script>
         <div class=bgm>
             <input type="button" value="▶" onclick="play()" />
             <input type="button" value="||" onclick="pause()" />

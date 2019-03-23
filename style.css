@@ -5,6 +5,10 @@ h1 {
   font-family: 'Nanum Gothic', sans-serif;
   font-size:30px;
 }
+#displayee{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size:30px;
+}
 .bgm{
   position: absolute;
   top:15px;
