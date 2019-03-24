@@ -9,10 +9,15 @@ h1 {
   font-family: 'Nanum Gothic', sans-serif;
   font-size:30px;
 }
-.bgm{
+#Audio_Player{
   position: absolute;
   top:15px;
-  left:200px;
+  left:180px;
+}
+#track{
+  position: absolute;
+  top:30px;
+  left:480px;
 }
 .tree{
   color:#6EE3F7;

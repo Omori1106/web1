@@ -15,8 +15,13 @@
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="nightDaybutton.js"></script>
-<script src="audio.js"></script>
 <script src="calc.js"></script>
+<script>
+function selectChangeEvent(track){
+  var a_player = document.getElementById('Audio_Player')
+  a_player.src=track;
+}
+</script>
 </head>
 <body>
   <div id=treeworld>
@@ -41,7 +46,7 @@
     <a class="menuLink" href="#">사과나무</a>
     <ul class="submenu">
       <li><a href="1.html" class="submenuLink">AAAA</a></li>
-      <li><a class="submenuLink">BBBB</a></li>
+      <li><a href="2.html" class="submenuLink">야구_단어사전</a></li>
       <li><a class="submenuLink">CCCC</a></li>
       </ul>
     </li>
@@ -58,7 +63,7 @@
     <li class="topMenuLi">
     <a class="menuLink" href="#">단풍나무</a>
     <ul class="submenu">
-      <li><a class="submenuLink">GGGG</a></li>
+      <li><a href="GGGG.html" class="submenuLink">Omori</a></li>
       <li><a class="submenuLink">HHHH</a></li>
       <li><a class="submenuLink">IIII</a></li>
       </ul>
@@ -219,13 +224,14 @@
               displayee.innerHTML = texttt;
             }
             </script>
-        <div class=bgm>
-            <input type="button" value="▶" onclick="play()" />
-            <input type="button" value="||" onclick="pause()" />
-            <input type="button" value="■" onclick="stop()" />
-            <progress value="0" id="progress"></progress>
-            <span id="current"></span> 초/ <span id="total"></span> 초
-        </div>
+            <audio id='Audio_Player' autoplay controls>
+              <source src='Track 01.mp3'></source>
+            </audio>
+              <select id="track" onchange=selectChangeEvent(this.value)>
+                <option value='Track 01.mp3' selected="selected">Track 01</option>
+                <option value='Track 02.mp3'>Track 02</option>
+                <option value='Track 03.mp3'>Track 03</option>
+            </select>
       <br><br><br><br>Copyright 2019. <strong>omori</strong> all right reserved.
     </center>
     </div>

@@ -9,10 +9,15 @@ h1 {
   color:yellowgreen;
   text-decoration: none;
 }
-.bgm{
+#Audio_Player{
   position: absolute;
   top:15px;
-  left:200px;
+  left:180px;
+}
+#track{
+  position: absolute;
+  top:30px;
+  left:480px;
 }
 #top{
   position: absolute;

@@ -54,9 +54,9 @@ function selectChangeEvent(track){
     <li class="topMenuLi">
     <a class="menuLink" href="#">포도나무</a>
     <ul class="submenu">
-      <li><a href ="DDDD.html" class="submenuLink">야구스텟_계산기(1)</a></li>
+      <li><a href="DDDD.html" class="submenuLink">야구스텟_계산기(1)</a></li>
       <li><a href="EEEE.html" class="submenuLink">야구스텟_계산기(2)</a></li>
-      <li><a class="submenuLink">비례식_계산기</a></li>
+      <li><a href="FFFF.html" class="submenuLink">비례식_계산기</a></li>
       </ul>
     </li>
     <li><a class="stick">|</a></li>
@@ -93,45 +93,29 @@ function selectChangeEvent(track){
   <div id="SK1">
     <center>
       <br><br>
-      <h1>포도나무를 깨물자</h1>
+      <h1>단풍나무를 깨물자</h1>
       <p>
         <div class=treemean>
-        <h2>#비례식_계산기</h2>
+        <h2>#오모리_소개</h2>
       <div class=mean>
-        <br>A : B = C : D 꼴의 비례식을 계산해주는 페이지입니다.
-        <br>A, B, C 위치의 빈칸에 숫자를 입력하면 완성된 비례식이 표출됩니다.
-        <br><br>소숫점 얼마를 넣던 계산 다 되는데 숫자 아닌거 넣으면 저런해지니까 하지 마세요.
-        <br><br><br><a id="display">
-        <input type="text" id="num1" placeholder="A" size="10">&ensp;:&ensp;
-        <input type="text" id="num2" placeholder="B" size="10">&ensp;=&ensp;
-        <input type="text" id="num3" placeholder="C" size="10">
-        <button id="action">:</button></a>
-        <script>
-        action.onclick = function(){
-          alert("계산이 완료되었습니다 :)");
-          var n1 = num1.value;
-          var n2 = num2.value;
-          var n3 = num3.value;
-          result(n1,n2,n3);
-        }
-
-        function result(n1, n2, n3){
-          var res = (n2 * n3) / n1 ;
-          var text = n1+"&nbsp:&nbsp"+n2+"&nbsp=&nbsp"+n3+"&nbsp:&nbsp"+res;
-          display.innerHTML = text;
-        }
-        </script>
-        <audio id='Audio_Player' autoplay controls>
-          <source src='Track 01.mp3'></source>
-        </audio>
-          <select id="track" onchange=selectChangeEvent(this.value)>
-            <option value='Track 01.mp3' selected="selected">Track 01</option>
-            <option value='Track 02.mp3'>Track 02</option>
-            <option value='Track 03.mp3'>Track 03</option>
-        </select>
-      <br><br><br><br>Copyright 2019. <strong>omori</strong> all right reserved.
-    </center>
-    </div>
-</div>
-</body>
-</html>
+        <br><strong>오모리</strong><br>[명사] ‘꽁무니’의 옛말.<br>
+        <br>안녕하세요. 홈페이지 제작자 Omori 입니다.
+        <br>오모리 뜻은 그냥 누가 추천해줘서 쓰고 있는 닉네임입니다.
+        <br>홈페이지 이름에서도 알 수 있겠지만 모 커뮤니티에서는 나무라는 닉네임으로 활동합니다.
+        <br>흐암
+        <br>오모리김치찌개와 Omori는 아무런 관계가 없읍니다. OMORI라는 게임과도 관련 없읍니다. 당연히 위의 사전과도 관련 없읍니다.
+        <br><br>★☆★☆★ 2018 ~ ? SK와이번스 왕조 건설 기원 ★☆★☆★
+          <audio id='Audio_Player' autoplay controls>
+            <source src='Track 01.mp3'></source>
+          </audio>
+            <select id="track" onchange=selectChangeEvent(this.value)>
+              <option value='Track 01.mp3' selected="selected">Track 01</option>
+              <option value='Track 02.mp3'>Track 02</option>
+              <option value='Track 03.mp3'>Track 03</option>
+          </select>
+          <br><br><br><br>Copyright 2019. <strong>omori</strong> all right reserved.
+          </center>
+          </div>
+          </div>
+          </body>
+          </html>

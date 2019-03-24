@@ -13,11 +13,13 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-136329220-1');
-
-
-
 </script>
-<script src="audio.js"></script>
+<script>
+function selectChangeEvent(track){
+  var a_player = document.getElementById('Audio_Player')
+  a_player.src=track;
+}
+</script>
   </head>
   <body>
     <div id=treeworld>
@@ -42,7 +44,7 @@
       <a class="menuLink" href="#">사과나무</a>
       <ul class="submenu">
         <li><a href="1.html" class="submenuLink">AAAA</a></li>
-        <li><a class="submenuLink">BBBB</a></li>
+        <li><a href="2.html" class="submenuLink">야구_단어사전</a></li>
         <li><a class="submenuLink">CCCC</a></li>
         </ul>
       </li>
@@ -59,7 +61,7 @@
       <li class="topMenuLi">
       <a class="menuLink" href="#">단풍나무</a>
       <ul class="submenu">
-        <li><a class="submenuLink">GGGG</a></li>
+        <li><a href="GGGG.html" class="submenuLink">Omori</a></li>
         <li><a class="submenuLink">HHHH</a></li>
         <li><a class="submenuLink">IIII</a></li>
         </ul>
@@ -103,22 +105,22 @@
             <h2><strong>TreeWorld - 나무세상</strong> 페이지 소개</h2>
           </div>
           <div class=mean>
-            나무의, 나무를 위한, 나무에 의한 페이지입니다.
             <br>나무를 씹고 뜯고 맛보고 즐기는 페이지입니다.
-            <br>오쪼로고<br>
-            <br>이 페이지는<strong>오모리</strong>가 만들었습니다.<br>
+            <br>야구 스텟 계산기 등 여러 야구 관련 기능이 있으니 알아서 찾아보세요.<br>
+            <br>이 페이지는 <strong>오모리(Omori)</strong>가 만들었습니다.<br>
             <br>[TIP!] 오모리가 누군지 궁금하면 단풍나무를 깨물어보세요.<br>
-            <br>오모리김치찌개 이미지 보기 → <a href="https://c11.kr/66ha">#클릭</a>
-            <br><br>좌측 상단 배경음악 출처 : <a href="https://www.bensound.com">www.bensound.com</a>
+            <br>연락할 사항은 smart_tomy@naver.com 으로 메일주세요.</a>
+            <br><br>
           </p>
-          <div class=bgm>
-              <input type="button" value="▶" onclick="play()" />
-              <input type="button" value="||" onclick="pause()" />
-              <input type="button" value="■" onclick="stop()" />
-              <progress value="0" id="progress"></progress>
-              <span id="current"></span> 초/ <span id="total"></span> 초
-          </div>
-          <br><br><br><br>Copyright 2019. <strong>omori</strong> all right reserved.
+            <audio id='Audio_Player' autoplay controls>
+              <source src='Track 01.mp3'></source>
+            </audio>
+              <select id="track" onchange=selectChangeEvent(this.value)>
+                <option value='Track 01.mp3' selected="selected">Track 01</option>
+                <option value='Track 02.mp3'>Track 02</option>
+                <option value='Track 03.mp3'>Track 03</option>
+            </select>
+          <br><br>Copyright 2019. <strong>omori</strong> all right reserved.
         </center>
         </div>
     </div>
