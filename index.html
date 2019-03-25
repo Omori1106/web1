@@ -20,6 +20,18 @@ function selectChangeEvent(track){
   a_player.src=track;
 }
 </script>
+<script type="text/javascript">
+
+ if( /iPhone|iPad|iPod|BlackBerry|Android|Windows CE|LG|MOT|SAMSUNG|SonyEricsson|webOS|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+alert("모바일 환경에서 접속하셨습니다. 모바일 페이지는 아직 미구현 상태입니다. PC버전 페이지로 연결됩니다. 뿅");
+
+ }
+
+ else {
+ }
+
+ </script>
   </head>
   <body>
     <div id=treeworld>
@@ -70,7 +82,7 @@ function selectChangeEvent(track){
       <li class="topMenuLi">
       <a class="menuLink" href="#">은행나무</a>
       <ul class="submenu">
-        <li><a class="submenuLink">JJJJ</a></li>
+        <li><a href="JJJJ.html" class="submenuLink">시계</a></li>
         <li><a class="submenuLink">KKKK</a></li>
         <li><a class="submenuLink">LLLL</a></li>
         </ul>

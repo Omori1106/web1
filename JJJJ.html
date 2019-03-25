@@ -22,6 +22,86 @@ function selectChangeEvent(track){
   a_player.src=track;
 }
 </script>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script>
+            $(function() {
+                var canvas = document.getElementById("myCanvas");
+                var context = canvas.getContext("2d");
+
+                //시계 관련 이미지 로딩
+                var dialImg = new Image();
+                var hourImg = new Image();
+                var minImg = new Image();
+                var secImg = new Image();
+                var pointImg = new Image();
+                dialImg.src = "analog.png";
+                hourImg.src = "hr.png";
+                minImg.src = "min.png";
+                secImg.src = "sec2.png";
+                pointImg.src = "point.png";
+                //시계를 그릴 중심 좌표
+                var clockX = 250, clockY = 250;
+                //시계의 반지름
+                var clockR = 150;
+                //핀의 width, height
+                var pinW = 4, pinH = 110;
+                var rSec, rMin, rHour;
+                //초침, 분침, 시침의 rotation radian( rad )
+
+                setInterval(getTime, 50);
+                setInterval(drawScreen, 50);
+
+                //화면 렌더링
+                function drawScreen() {
+                    //context 객체를 이용해서 렌더링 작업
+                    getTime();
+                    //시계 다이얼 이미지
+                    context.drawImage(dialImg, clockX - clockR, clockY - clockR, 300, 300);
+                    //context 의 현재 상태 저장
+                    context.save();
+
+                    context.translate(clockX, clockY);
+                    //평행이동
+
+                    context.rotate(rSec);
+                    //초침 그리기 위해 rotation
+                    //초침 그리기
+                    context.drawImage(secImg, -pinW / 2, -pinH, pinW, pinH);
+
+                    context.rotate(rMin - rSec);
+                    //분침 그리기 위해 rotation
+                    //분침 그리기
+                    context.drawImage(minImg, -pinW / 2, -pinH, pinW, pinH);
+
+                    context.rotate(rHour - rMin);
+                    //시침 그리기 위해 rotation
+                    //시침 그리기
+                    context.drawImage(hourImg, -pinW / 2, -pinH, pinW, pinH);
+
+                    //context를 저장된 상태로 되돌리기
+                    context.restore();
+                }
+
+                //현재 시간 얻어오는 함수
+                function getTime() {
+                    var d = new Date();
+                    var hour = d.getHours();
+                    var min = d.getMinutes();
+                    var sec = d.getSeconds();
+
+                    //초침의 회전각도
+                    rSec = sec * 6 * (Math.PI / 180);
+                    //분침의 회전각도
+                    rMin = min * 6 * (Math.PI / 180) + 6 * ((sec * 6) / 360) * (Math.PI / 180);
+                    //시침의 회전각도
+                    rHour = hour * 30 * (Math.PI / 180) + 30 * ((min * 6) / 360) * (Math.PI / 180);
+
+                    //div 에 출력
+                    $("#display").text("현재 시각은 "+hour + "시 " + min + "분 " + sec+"초 입니다. 좋은 하루 보내시길 바래요!");
+                }
+
+            });
+        </script>
 </head>
 <body>
   <div id=treeworld>
@@ -63,8 +143,8 @@ function selectChangeEvent(track){
     <li class="topMenuLi">
     <a class="menuLink" href="#">단풍나무</a>
     <ul class="submenu">
-      <li><a href="GGGG.html" class="submenuLink">GGGG</a></li>
       <li><a href="GGGG.html" class="submenuLink">Omori</a></li>
+      <li><a class="submenuLink">HHHH</a></li>
       <li><a class="submenuLink">IIII</a></li>
       </ul>
       </li>
@@ -93,82 +173,13 @@ function selectChangeEvent(track){
   <div id="SK1">
     <center>
       <br><br>
-      <h1>포도나무를 깨물자</h1>
+      <h1>은행나무를 깨물자</h1>
       <p>
-        <div class=treemean>
-        <h2>#야구스텟_계산기 #수비편_투수</h2>
-      <div class=mean>
-        <br>야구의 투수의 기본적인 스텟들을 계산해주는 페이지입니다.
-        <br>각 항목을 입력하면 ERA, WHIP, K/9, K/BB가 표출됩니다.
-        <br><br>[TIP] ERA=평균자책점. WHIP=이닝당 안타+볼넷 허용률, K/9=9이닝당 탈삼진, K/BB=탈삼진/볼넷
-        <br>[TIP] 평균자책점만 계산하실 거라면 이닝+자책점만 입력하시면 됩니다.
-        <br>[TIP] 타율과 장타율만 계산하실 거라면 윗줄의 텍스트창만 입력하시면 됩니다.
-        <br><br><br><a id="display">
-        <input type="text" id="num1" placeholder="이닝" size="5">&ensp;
-        <input type="text" id="num2" placeholder="자책점" size="5">&ensp;
-        <input type="text" id="num3" placeholder="피안타" size="5">&ensp;
-        <input type="text" id="num4" placeholder="볼넷" size="5">&ensp;
-        <input type="text" id="num5" placeholder="삼진" size="5">&ensp;
-        <input type="text" id="num6" placeholder="고의4구" size="5">
-        <br><br><button id="action">계산하기</button></a>
-
-        <script type="text/javascript">
-          action.onclick = function(){
-            alert("계산이 완료되었습니다 :)");
-            var n = parseInt(num1.value);
-            var er = parseInt(num2.value);
-            var h = parseInt(num3.value);
-            var bb = parseInt(num4.value);
-            var k = parseInt(num5.value);
-            var ibb = parseInt(num6.value);
-            result(n,er,h,bb,k,ibb);
-          }
-
-          function result(n,er,h,bb,k,ibb){
-            var era = er*9/n;
-            var whip = (h+bb)/n;
-            var ka = k/n*9;
-            var kb = k/bb;
-            var text = "평균자책점 : "+era.toFixed(2)+"<br>WHIP : "+whip.toFixed(2)+
-            "<br>K/9 : "+ka.toFixed(2)+"<br>K/BB : "+kb.toFixed(2);
-            display.innerHTML = text;
-          }
-        </script>
-        <p><br><br><br>
-          <div class=treemean>
-          <h2>#야구스텟_계산기 #수비편_수비</h2>
+        <canvas id="myCanvas" width="500" height="500"></canvas>
+        <div id="display"></div>
         <div class=mean>
-          <br>야구의 수비의 기본적인 스텟들을 계산해주는 페이지입니다.
-          <br>각 항목을 입력하면 수비율, 도루저지율이 표출됩니다.
-          <br><br>[TIP] 수비율은 자살+보살+실책을 기록하고, 도루저지율은 도루허용+도루저지를 기록하시기 바랍니다.
-          <br>[TIP] 자살: 타자나 주자를 아웃시킨 최종적인 야수에게 주는 기록, 보살: 아웃시킨 과정에 있는 야수에게 주는 기록.
-          <br><br><br><a id="displayee">
-          <input type="text" id="anum1" placeholder="자살" size="5">&ensp;
-          <input type="text" id="anum2" placeholder="보살" size="5">&ensp;
-          <input type="text" id="anum3" placeholder="실책" size="5">
-          <br>
-          <input type="text" id="anum4" placeholder="도루허용" size="5">&ensp;
-          <input type="text" id="anum5" placeholder="도루저지" size="5">
-          <br><br><button id="calc">계산하기</button></a>
-
-          <script type="text/javascript">
-            calc.onclick = function(){
-              alert("계산이 완료되었습니다 :)");
-              var po = parseInt(anum1.value);
-              var a = parseInt(anum2.value);
-              var e = parseInt(anum3.value);
-              var sb = parseInt(anum4.value);
-              var cs = parseInt(anum5.value);
-              resulttt(po,a,e,cs,sb);
-            }
-
-            function resulttt(po,a,e,cs,sb){
-              var def = (po+a)/(po+a+e);
-              var doru = cs / (cs+sb);
-              var text = "수비율 : "+def.toFixed(3)+"<br>도루저지율 : "+doru.toFixed(3);
-              displayee.innerHTML = text;
-            }
-          </script>
+          <br><br>
+          시계 이미지 및 코드 출처 : <a href="https://homoecono.blog.me/130170508738">#네이버블로그</a>
           <audio id='Audio_Player' autoplay controls>
             <source src='Track 01.mp3'></source>
           </audio>

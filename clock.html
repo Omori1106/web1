@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>Analog Time</title>
+		<meta charset="utf-8"/>
+		<style>
+			#canvas {
+				background-color: #dddddd;
+			}
+		</style>
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script>
+			$(function() {
+				var canvas = document.getElementById("myCanvas");
+				var context = canvas.getContext("2d");
+
+				//시계 관련 이미지 로딩
+				var dialImg = new Image();
+				var hourImg = new Image();
+				var minImg = new Image();
+				var secImg = new Image();
+				var pointImg = new Image();
+				dialImg.src = "images/analog.png";
+				hourImg.src = "images/hr.png";
+				minImg.src = "images/min.png";
+				secImg.src = "images/sec.png";
+				pointImg.src = "images/point.png";
+				//시계를 그릴 중심 좌표
+				var clockX = 250, clockY = 250;
+				//시계의 반지름
+				var clockR = 150;
+				//핀의 width, height
+				var pinW = 4, pinH = 110;
+				var rSec, rMin, rHour;
+				//초침, 분침, 시침의 rotation radian( rad )
+
+				setInterval(getTime, 50);
+				setInterval(drawScreen, 50);
+
+				//화면 렌더링
+				function drawScreen() {
+					//context 객체를 이용해서 렌더링 작업
+					getTime();
+					//시계 다이얼 이미지
+					context.drawImage(dialImg, clockX - clockR, clockY - clockR, 300, 300);
+					//context 의 현재 상태 저장
+					context.save();
+
+					context.translate(clockX, clockY);
+					//평행이동
+
+					context.rotate(rSec);
+					//초침 그리기 위해 rotation
+					//초침 그리기
+					context.drawImage(secImg, -pinW / 2, -pinH, pinW, pinH);
+
+					context.rotate(rMin - rSec);
+					//분침 그리기 위해 rotation
+					//분침 그리기
+					context.drawImage(minImg, -pinW / 2, -pinH, pinW, pinH);
+
+					context.rotate(rHour - rMin);
+					//시침 그리기 위해 rotation
+					//시침 그리기
+					context.drawImage(hourImg, -pinW / 2, -pinH, pinW, pinH);
+
+					//context를 저장된 상태로 되돌리기
+					context.restore();
+				}
+
+				//현재 시간 얻어오는 함수
+				function getTime() {
+					var d = new Date();
+					var hour = d.getHours();
+					var min = d.getMinutes();
+					var sec = d.getSeconds();
+
+					//초침의 회전각도
+					rSec = sec * 6 * (Math.PI / 180);
+					//분침의 회전각도
+					rMin = min * 6 * (Math.PI / 180) + 6 * ((sec * 6) / 360) * (Math.PI / 180);
+					//시침의 회전각도
+					rHour = hour * 30 * (Math.PI / 180) + 30 * ((min * 6) / 360) * (Math.PI / 180);
+
+					//div 에 출력
+					$("#myConsole").text(hour + " : " + min + " : " + sec);
+				}
+
+			});
+		</script>
+	</head>
+
+	<body>
+		<canvas id="myCanvas" width="500" height="500"></canvas>
+		<div id="myConsole"></div>
+	</body>
+</html>

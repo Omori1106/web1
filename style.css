@@ -1,6 +1,9 @@
 h1 {
   font-family: 'Jua', sans-serif;
 }
+#canvas {
+    background-color: #dddddd;
+}
 #display{
   font-family: 'Nanum Gothic', sans-serif;
   font-size:30px;
