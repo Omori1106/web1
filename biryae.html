@@ -51,6 +51,7 @@ alert("모바일 환경에서 접속하셨습니다. 모바일 페이지는 아�
  		printTime();
  	}
 
+
  </script>
 
 
@@ -66,20 +67,39 @@ alert("모바일 환경에서 접속하셨습니다. 모바일 페이지는 아�
           <p>
             <div class=mean>
             <h2>🌳 SmallTree Web Service 🌳</h2>
-          </div>
-          <div class=treemean>
-            <br><br><br><a href="biryae.html">비례식_계산기
-              <br><small>Proportional Expression Calculator</small></a>
-            </div>
-          <div class=mean>
-            <br><br><br><h3>🕐 Current Time:
-              <span id="clock"></span>
-              <br>🌐 STWS Version: Beta 0.1</h3>
+            <br><br><br><a id="display">
+            <input type="text" id="num1" placeholder="A" size="10">&ensp;:&ensp;
+            <input type="text" id="num2" placeholder="B" size="10">&ensp;=&ensp;
+            <input type="text" id="num3" placeholder="C" size="10">
+            <button id="action">:</button></a>
+            <script>
+            action.onclick = function(){
+              alert("계산이 완료되었습니다 :)\nCalculating Completed");
+              var n1 = num1.value;
+              var n2 = num2.value;
+              var n3 = num3.value;
+              result(n1,n2,n3);
+              function result(n1, n2, n3){
+                var res = (n2 * n3) / n1 ;
+                var text = n1+"&nbsp:&nbsp"+n2+"&nbsp=&nbsp"+n3+"&nbsp:&nbsp"+res;
+                display.innerHTML = text;
+              }
+            }
+            </script>
+            <div class=treemean>
+              <br><br><br><a href="index.html">메인으로 돌아가기
+                <br><small>Go To Main Site</small></a>
+              </div>
+              <div class=mean>
+              <br><br><br><h3>🕐 Current Time:
+                <span id="clock"></span>
+                <br>🌐 STWS Version: Beta 0.1</h3>
           </p>
 
           <hr width=50%>Copyright 2019. <strong>omori</strong> all right reserved.
           <br>Contact : <a href="smart_tomy@naver.com">smart_tomy@naver.com</a>
         </center>
         </div>
+    </div>
   </body>
 </html>
