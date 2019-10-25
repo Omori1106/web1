@@ -1,17 +1,23 @@
-#stwslogo{
-  margin-top: 80px;
-}
-  )
-
 body{
-      margin:0;
-      background-image:url("./dotori.jpg");
+  margin:0;
+      background-image:url("dotori.jpg");
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-position: center;
     }
     a {
       text-decoration: none;
+      border-bottom: 1px solid orange;
+      border-top: 1px solid orange;
+    }
+    a:link{
+      color: orange;
+    }
+    a:visited{
+      color: orange;
+    }
+    a:hover{
+      color: yellowgreen;
     }
     .mean{
       font-family: 'Poor Story', cursive;
@@ -19,10 +25,15 @@ body{
     .treemean{
       font-family: 'Jua', cursive;
     }
+
  footer{
    text-align: center;
    font-family: 'Poor Story',cursive;
  }
+ #stwslogo{
+   margin-top: 5%;
+ }
+
 .menu1{
   font-family: 'Staatliches', cursive;
   font-size: 50px;
