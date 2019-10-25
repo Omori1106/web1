@@ -7,14 +7,12 @@ body{
     }
     a {
       text-decoration: none;
-      border-bottom: 1px solid orange;
-      border-top: 1px solid orange;
     }
     a:link{
-      color: orange;
+      color: #cc99ff;
     }
     a:visited{
-      color: orange;
+      color: #cc99ff;
     }
     a:hover{
       color: yellowgreen;
