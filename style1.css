@@ -1,15 +1,3 @@
-h1 {
-  font-family: 'Jua', sans-serif;
-}
-.tree{
-  color:#6EE3F7;
-  text-decoration: none;
-}
-.world{
-  color:yellowgreen;
-  text-decoration: none;
-}
-
 #stwslogo{
   margin-top: 80px;
 }
@@ -17,6 +5,10 @@ h1 {
 
 body{
       margin:0;
+      background-image:url("./dotori.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
     }
     a {
       text-decoration: none;
@@ -27,3 +19,11 @@ body{
     .treemean{
       font-family: 'Jua', cursive;
     }
+ footer{
+   text-align: center;
+   font-family: 'Poor Story',cursive;
+ }
+.menu1{
+  font-family: 'Staatliches', cursive;
+  font-size: 50px;
+}
