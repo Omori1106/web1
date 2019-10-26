@@ -43,6 +43,8 @@
 }
 header{
   border-bottom: 1px solid lightgrey;
+  font-family: 'do hyeon',cursive;
+  font-size: 20px;
 }
  footer{
    text-align: center;

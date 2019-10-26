@@ -35,8 +35,9 @@
 </head>
   <body>
     <header>
-       <a href="../index.html"><img class='toplogo' src="../stwstreepunch.png" width=250px style="position:relative"></a>
-         <span style="position:absolute; text-align: right; margin-top:12px;">MENU</span>
+       <a href="../index.html"><img class='toplogo' src="../stwstreepunch.png" width=250px ></a>
+         <span style="float: right; margin-top:12px; margin-right:10px;"
+         onclick="alert('나무를 클릭해 나무를 죽이는 페이지입니다.\n나무의 기본 체력은 10이며 공격 시 1씩 감소합니다.\n나무의 체력이 0이 되면 사망합니다.\n최대한 많은 나무를 잡아보세요!\n\n[TIP] 나무를 충분히 잡았다면 갑옷 입은 나무도 잡아보세요!')">HELP</span>
     </header>
     <center><br><br><img id="tree" src="smalltree.png" width=20%>
     <script>
@@ -56,6 +57,13 @@
     </script>
     <div class=Jua>
      <h2>나무를 클릭해서 때리세요!<br>Click the Tree to attack!</h2>
+     <pan id="armor">[ 나무 갑옷 입히기 ]</span>
+     <script>
+     armor.onclick = function(){
+       hp=100;
+       alert('나무가 갑옷을 입었습니다. 체력이 100으로 상승합니다.')
+     }
+       </script>
     </div>
     <div class=mean>
       <br><br><br><h3>
