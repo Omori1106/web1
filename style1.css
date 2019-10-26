@@ -6,17 +6,38 @@ body{
       background-position: center;
       background-size: cover;
     }
-    a {
+    a:link.click{
+      color: #de691e;
       text-decoration: none;
     }
-    a:link{
+    a:visited.click{
       color: #de691e;
+      text-decoration: none;
     }
-    a:visited{
-      color: #de691e;
-    }
-    a:hover{
+    a:hover.click{
       color: #ffa98f;
+      text-decoration: none;
+    }
+    a:link.mail{
+      color: black;
+    }
+    a:visited.mail{
+      color: black;
+    }
+    a:hover.mail{
+      color: black;
+    }
+    a:link.gomain{
+      color: #4374d9;
+      text-decoration: none;
+    }
+    a:visited.gomain{
+      color: #4374d9;
+      text-decoration: none;
+    }
+    a:hover.gomain{
+      color: #5adcf3;
+      text-decoration: none;
     }
     .mean{
       font-family: 'Poor Story', cursive;

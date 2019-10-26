@@ -5,12 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STWS - # Tree_Punch</title>
     <link rel="stylesheet" href="style1.css">
-    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Jua|Poor+Story|Yeon+Sung|Nanum+Gothic|Staatliches" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Jua|Poor+Story|Yeon+Sung|Nanum+Gothic|Staatliches|Sawarabi+Gothic" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136329220-1"></script>
+<script type="text/javascript">
+
+ function printTime() {
+ 		var clock = document.getElementById("clock");
+ 		//id값인 <span>태그를 변수clock에 저장
+ 		var now = new Date();
+ 		//객체 생성
+
+ 		clock.innerHTML =
+ 			//태그내부에 태그 설정
+ 		now.getFullYear() + "년 " +
+ 		(now.getMonth() + 1) + "월 " +
+ 		now.getDate() + "일 " +
+ 		now.getHours() + "시 " +
+ 		now.getMinutes() + "분 " +
+ 		now.getSeconds() + "초";
+ 		setTimeout("printTime()", 1000);
+ 		//1초마다 printTime()함수 호출
+ 	}
+ 	window.onload = function() { //html 로딩시 콜백함수 호출
+ 		printTime();
+ 	}
+
+ </script>
 </head>
   <body>
-    <center><img id="tree" src="smalltree.png" width=50%>
+    <header>
+       <a href="../index.html"><img class='toplogo' src="../stwstreepunch.png" width=250px style="position:relative"></a>
+         <span style="position:absolute; text-align: right; margin-top:12px;">MENU</span>
+    </header>
+    <center><br><br><img id="tree" src="smalltree.png" width=20%>
     <script>
     var hp=10;
     var kill=0;
@@ -29,6 +57,19 @@
     <div class=Jua>
      <h2>나무를 클릭해서 때리세요!<br>Click the Tree to attack!</h2>
     </div>
+    <div class=mean>
+      <br><br><br><h3>
+        🏠<a href="index.html" class='gomain'> Go To Main Site</a><br><br>
+        🕐 Current Time:
+        <span id="clock"></span>
+        <br>🌐 STWS Version: Beta 0.1</h3>
+    </p>
+<footer>
+    <hr width=50%>Copyright 2019. <strong>omori</strong> all right reserved.
+    <br>Contact : <a href="mailto:smart_tomy@naver.com" class='mail'>smart_tomy@naver.com</a>
+  </center>
+  </div>
+</footer>
     </center>
   </body>
 </html>
