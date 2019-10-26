@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STWS - SmallTree Web Service</title>
     <link rel="stylesheet" href="style1.css">
     <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Jua|Poor+Story|Yeon+Sung|Nanum+Gothic|Staatliches" rel="stylesheet">
@@ -22,7 +21,6 @@ function selectChangeEvent(track){
 }
 </script>
 <script type="text/javascript">
-
  function printTime() {
  		var clock = document.getElementById("clock");
  		//id값인 <span>태그를 변수clock에 저장
@@ -51,8 +49,8 @@ function selectChangeEvent(track){
   <body>
     <header>
     <div id=stwslogo align="center">
-      <a href="index.html">
-    <img src="stwslogo.png" alt="로고" >
+    <a href="index.html"><img src="stwslogo.png"></a>
+    <a href="tree.html"><img src="shoptree.png" style="padding-bottom:2%;"></a>
   </a>
   </div>
 </header>
@@ -61,21 +59,21 @@ function selectChangeEvent(track){
           <p>
             <div class=mean style="line-height:0.5em;">
             <h2>🌳 SmallTree Web Service 🌳</h2>
-            귀엽고 앙증맞은 나무
+            커엽고 커여운 나무
           </div>
           <nav>
           <div class=menu1>
-            <Br><a href="tree.html"> [ST] Tree <span style="font-size:0.4em;">🌲</span> </a>
+            <Br><a href="tree/gallery.html"> # Tree_Gallery </a>
             <div class=sun style="width:100px;"> </div>
-            <a href="index.html" onclick="alert('Not Opened!\n아직 제작중인 페이지입니다.')"> [ST] Baseball <span style="font-size:0.4em;">⚾</span> </a>
+            <a href="tree/Dictionary.html"> # Dictionary </a>
             <div class=sun style="width:100px;"> </div>
-            <a href="biryae.html"> [ST] etc. <span style="font-size:0.4em;">🎸</span> </a>
-            <div class=sun style="width:100px;"> </div>
-            <a href="develop.html"> [ST] Developer <span style="font-size:0.4em;">🔧</span> </a>
+            <a href="tree/punch.html"> # Tree_Punch </a>
             </div>
           </nav>
           <div class=mean>
-            <br><br><br><h3>🕐 Current Time:
+            <br><br><br><h3>
+              🏠<a href="index.html"> Go To Main Site</a><br><br>
+              🕐 Current Time:
               <span id="clock"></span>
               <br>🌐 STWS Version: Beta 0.1</h3>
           </p>

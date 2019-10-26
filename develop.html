@@ -21,15 +21,6 @@ function selectChangeEvent(track){
 }
 </script>
 <script type="text/javascript">
-
- if( /iPhone|iPad|iPod|BlackBerry|Android|Windows CE|LG|MOT|SAMSUNG|SonyEricsson|webOS|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-
-alert("모바일 환경에서 접속하셨습니다. 모바일 페이지는 아직 미구현 상태입니다. PC버전 페이지로 연결됩니다. 뿅");
-
- }
-
- else {
- }
  function printTime() {
  		var clock = document.getElementById("clock");
  		//id값인 <span>태그를 변수clock에 저장
@@ -66,14 +57,17 @@ alert("모바일 환경에서 접속하셨습니다. 모바일 페이지는 아�
       <div id="SK1">
         <center>
           <p>
-            <div class=mean>
+            <div class=mean style="line-height:0.5em;">
             <h2>🌳 SmallTree Web Service 🌳</h2>
+            듀류랑 쿨쿨 자는 나무
           </div>
           <nav>
           <div class=menu1>
-            <Br><a href="develop/log.html">[ Site Changelog ]</a>
-            <br><a href="develop/er.html">[ Developer Page ]</a>
-            <br><a href="develop/nakseo.html">[ NakSeo ]</a>
+            <Br><a href="develop/log.html"> # Update_Log </a>
+            <div class=sun style="width:100px;"> </div>
+            <a href="develop/er.html"> # Developer </a>
+            <div class=sun style="width:100px;"> </div>
+            <a href="develop/nakseo.html"> # Nakseo </a>
             </div>
           </nav>
           <div class=mean>
