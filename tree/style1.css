@@ -1,0 +1,45 @@
+body{
+  margin:0;
+      background-image:url("jandi.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+    }
+    a {
+      text-decoration: none;
+    }
+    a:link{
+      color: #de691e;
+    }
+    a:visited{
+      color: #de691e;
+    }
+    a:hover{
+      color: #ffa98f;
+    }
+    .mean{
+      font-family: 'Poor Story', cursive;
+    }
+    .treemean{
+      font-family: 'Jua', cursive;
+    }
+.sun{
+  border-top: 1px solid white;
+  margin:5px;
+}
+ footer{
+   text-align: center;
+   font-family: 'Poor Story',cursive;
+ }
+ #stwslogo{
+   margin-top: 5%;
+ }
+
+.menu1{
+  font-family: 'Staatliches', cursive;
+  font-size: 50px;
+}
+.Jua{
+  font-family: 'Jua', cursive;
+}
