@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,13 +16,13 @@
     var kill=0;
     tree.onclick = function(){
       if(hp==0){
-        hp=100;
+        hp=10;
         kill=kill+1;
-        alert('나무가 죽었습니다! 죽인 나무 수 : '+kill+'그루'\n+'You killed '+kill+' Trees.')
+        alert('나무가 죽었습니다! 죽인 나무 수 : '+kill+'그루\n'+'You killed '+kill+' Trees.');
       }
       else{
         hp=hp-1;
-        alert('HP : '+hp)
+        alert('HP : '+hp);
       }
     }
     </script>
