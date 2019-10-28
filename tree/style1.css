@@ -99,7 +99,7 @@ header{
   border-bottom-left-radius: 2px;
 }
 .square2{
-  margin-top:auto;
+  margin-top:5%;
   width: 400px;
   height: 160px;
   box-shadow: 5px 5px 5px #aaa;
@@ -110,7 +110,7 @@ header{
   border-bottom-left-radius: 2px;
 }
 .square3{
-  margin-top:auto;
+  margin-top:5%;
   width: 400px;
   height: 160px;
   box-shadow: 5px 5px 5px #aaa;
@@ -119,4 +119,10 @@ header{
   border-radius: 20px;
   border-top-right-radius: 2px;
   border-bottom-left-radius: 2px;
+}
+
+@media(max-width:800px){
+  #plate{
+    display:none;
+  }
 }
