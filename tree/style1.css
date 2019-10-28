@@ -71,3 +71,53 @@ header{
 .Jua{
   font-family: 'Jua', cursive;
 }
+
+.square{
+  margin-left: 10%;
+  margin-top:5%;
+  width: 400px;
+  height: 160px;
+  box-shadow: 5px 5px 5px #aaa;
+  background-color: gainsboro;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.square1{
+  margin-left: 10%;
+  margin-top:20%;
+  width: 400px;
+  height: 160px;
+  box-shadow: 5px 5px 5px #aaa;
+  background-color: gainsboro;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.square2{
+  margin-left: 20%;
+  margin-top:5%;
+  width: 400px;
+  height: 160px;
+  box-shadow: 5px 5px 5px #aaa;
+  background-color: gainsboro;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.square3{
+  margin-left: 20%;
+  margin-top:20%;
+  width: 400px;
+  height: 160px;
+  box-shadow: 5px 5px 5px #aaa;
+  background-color: gainsboro;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
