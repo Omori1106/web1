@@ -50,6 +50,9 @@ header{
    text-align: center;
    font-family: 'Poor Story',cursive;
  }
+ h2{
+   font-family: 'Nanum Gothic',cursive;
+ }
  #stwslogo{
    margin-top: 5%;
  }
@@ -79,7 +82,7 @@ header{
   width: 400px;
   height: 160px;
   box-shadow: 5px 5px 5px #aaa;
-  background-color: #eaeaea;
+  background-color: #f0f0f0;
   border: 1px solid gainsboro;
   border-radius: 20px;
   border-top-right-radius: 2px;
@@ -93,7 +96,7 @@ header{
   width: 400px;
   height: 160px;
   box-shadow: 5px 5px 5px #aaa;
-  background-color: #eaeaea;
+  background-color: #f0f0f0;
   border: 1px solid gainsboro;
   border-radius: 20px;
   border-top-right-radius: 2px;
@@ -106,7 +109,7 @@ header{
   width: 400px;
   height: 160px;
   box-shadow: 5px 5px 5px #aaa;
-  background-color: #eaeaea;
+  background-color: #f0f0f0;
   border: 1px solid gainsboro;
   border-radius: 20px;
   border-top-right-radius: 2px;
@@ -119,7 +122,7 @@ header{
   width: 400px;
   height: 160px;
   box-shadow: 5px 5px 5px #aaa;
-  background-color: #eaeaea;
+  background-color: #f0f0f0;
   border: 1px solid gainsboro;
   border-radius: 20px;
   border-top-right-radius: 2px;
