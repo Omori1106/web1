@@ -39,44 +39,24 @@
          <span style="float: right; margin-top:12px; margin-right:10px;"
          onclick="alert('개발중')">HELP</span>
     </header>
-    <div style="display:flex">
+    <div style="display:flex; width=100%;">
     <div class=square></div>
     <div class=square1></div>
+  </div>
+  <center><br><br><img id="tree" src="plate.png" width=10%></center>
+  <div style="display:flex">
     <div class=square2></div>
     <div class=square3></div>
   </div>
-    <center><br><br><img id="tree" src="smalltree.png" width=20%>
-    <script>
-    var hp=10;
-    var kill=0;
-    tree.onclick = function(){
-      if(hp==0){
-        hp=10;
-        kill=kill+1;
-        alert('나무가 죽었습니다! 죽인 나무 수 : '+kill+'그루\n'+'You killed '+kill+' Trees.');
-      }
-      else{
-        hp=hp-1;
-        alert('HP : '+hp);
-      }
-    }
-    </script>
-    <div class=Jua>
-     <h2>나무를 클릭해서 때리세요!<br>Click the Tree to attack!</h2>
-     <pan id="armor">[ 나무 갑옷 입히기 ]</span>
-     <script>
-     armor.onclick = function(){
-       hp=100;
-       alert('나무가 갑옷을 입었습니다. 체력이 100으로 상승합니다.')
-     }
-       </script>
-    </div>
+</div>
+    <center>
     <div class=mean>
       <br><br><br><h3>
         🏠<a href="../index.html" class='gomain'> Go To Main Site</a><br><br>
         🕐 Current Time:
         <span id="clock"></span>
         <br>🌐 STWS Version: Beta 0.1</h3>
+      </center>
     </p>
 <footer>
     <hr width=50%>Copyright 2019. <strong>omori</strong> all right reserved.
