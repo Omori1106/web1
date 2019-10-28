@@ -47,8 +47,13 @@
       if(hp==0){
         hp=10;
         kill=kill+1;
+        if(kill==1){
+        alert('나무가 죽었습니다! 죽인 나무 수 : '+kill+'그루\n'+'You killed '+kill+' Tree.');
+      }
+      else{
         alert('나무가 죽었습니다! 죽인 나무 수 : '+kill+'그루\n'+'You killed '+kill+' Trees.');
       }
+    }
       else{
         hp=hp-1;
         alert('HP : '+hp);
@@ -67,7 +72,7 @@
     </div>
     <div class=mean>
       <br><br><br><h3>
-        🏠<a href="../index.html" class='gomain'> Go To Main Site</a><br><br>
+        🏠<a href="./index.html" class='gomain'> Go To Main Site</a><br><br>
         🕐 Current Time:
         <span id="clock"></span>
         <br>🌐 STWS Version: Beta 0.1</h3>
