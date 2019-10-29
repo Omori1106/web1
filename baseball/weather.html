@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STWS - # Tree_Punch</title>
+    <link rel="stylesheet" href="../tree/style1.css">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Jua|Poor+Story|Yeon+Sung|Nanum+Gothic|Staatliches|Sawarabi+Gothic" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136329220-1"></script>
+<script type="text/javascript">
+
+ function printTime() {
+ 		var clock = document.getElementById("clock");
+ 		//id값인 <span>태그를 변수clock에 저장
+ 		var now = new Date();
+ 		//객체 생성
+
+ 		clock.innerHTML =
+ 			//태그내부에 태그 설정
+ 		now.getFullYear() + "년 " +
+ 		(now.getMonth() + 1) + "월 " +
+ 		now.getDate() + "일 " +
+ 		now.getHours() + "시 " +
+ 		now.getMinutes() + "분 " +
+ 		now.getSeconds() + "초";
+ 		setTimeout("printTime()", 1000);
+ 		//1초마다 printTime()함수 호출
+ 	}
+ 	window.onload = function() { //html 로딩시 콜백함수 호출
+ 		printTime();
+ 	}
+
+ </script>
+</head>
+  <body>
+    <header>
+       <a href="../index.html"><img class='toplogo' src="../stwstreeyagu.png" width=250px ></a>
+         <span style="float: right; margin-top:12px; margin-right:10px;"
+         onclick="alert('KBO 9개 구장의 날씨를 알려드립니다.\n글자 클릭 시 네이버 검색 주소로 연결됩니다.\n추후 크롤링 시스템을 적용하여 페이지 내에 기상 정보를 표출할 예정입니다.')">HELP</span>
+    </header>
+    <center>
+    <ul class=title style="list-style-type:none; font-size:30px; line-height:2em;">
+			<li><a href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%EC%9E%A0%EC%8B%A4%EC%95%BC%EA%B5%AC%EC%9E%A5+%EB%82%A0%EC%94%A8&oquery=%EC%9E%A0%EC%8B%A4%EA%B5%AC%EC%9E%A5+%EB%82%A0%EC%94%A8&tqi=UkmhIdp0J1sssdGHbF4ssssssc0-354893"><span style="color: #131230;">잠실</span><span style="color:#C30452">야구장</span></a></li>
+			<li><a href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%EA%B3%A0%EC%B2%99%EC%8A%A4%EC%B9%B4%EC%9D%B4%EB%8F%94+%EB%82%A0%EC%94%A8&oquery=%EC%9E%A0%EC%8B%A4%EC%95%BC%EA%B5%AC%EC%9E%A5+%EB%82%A0%EC%94%A8&tqi=Ukmitlp0Jy0ssfcJm3VssssssGs-485560"><span style="color:#820024">고척스카이돔</span></a></li>
+			<li><span style="color:#FF0000">인천SK행복드림구장</span></li>
+			<li><span style="color:#00275a">창원NC파크</span></li>
+			<li><span style="color:#373535">수원KT위즈파크</span></li>
+			<li><span style="color:#C70125">광주KIA챔피언스필드</span></li>
+			<li><span style="color:#074ca1">대구삼성라이온즈파크</span></li>
+			<li><span style="color:#ff6600">한화생명이글스파크</span></li>
+			<li><span style="color:#002955">사직야구장</span></li>
+		</ul>
+    <div class=mean>
+      <br><br><br><h3>
+        🏠<a href="./index.html" class='gomain'> Go To Main Site</a><br><br>
+        🕐 Current Time:
+        <span id="clock"></span>
+        <br>🌐 STWS Version: Beta 0.1</h3>
+    </p>
+<footer>
+    <hr width=50%>Copyright 2019. <strong>omori</strong> all right reserved.
+    <br>Contact : <a href="mailto:smart_tomy@naver.com" class='mail'>smart_tomy@naver.com</a>
+  </center>
+  </div>
+</footer>
+    </center>
+  </body>
+</html>

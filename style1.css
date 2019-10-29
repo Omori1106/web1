@@ -64,3 +64,7 @@ body{
 .Jua{
   font-family: 'Jua', cursive;
 }
+@font-face{
+    font-family: 'pastpicture4';
+    src: url(../font/a옛날사진관4.ttf);
+}

@@ -31,6 +31,18 @@
       color: #5adcf3;
       text-decoration: none;
     }
+    a:link.none{
+      color: black;
+      text-decoration: none;
+    }
+    a:visited.none{
+      color: black;
+      text-decoration: none;
+    }
+    a:hover.none{
+      color: black;
+      text-decoration: none;
+    }
     .mean{
       font-family: 'Poor Story', cursive;
     }
@@ -77,7 +89,7 @@ header{
 
 .square{
   margin-top:5%;
-  width: 400px;
+  width: 450px;
   height: 160px;
   box-shadow: 5px 5px 5px #aaa;
   background-color: #f0f0f0;
@@ -89,7 +101,7 @@ header{
 
 .square1{
   margin-top:5%;
-  width: 400px;
+  width: 450px;
   height: 160px;
   box-shadow: 5px 5px 5px #aaa;
   background-color: #f0f0f0;
@@ -99,8 +111,8 @@ header{
   border-bottom-left-radius: 2px;
 }
 .square2{
-  margin-top:5%;
-  width: 400px;
+  margin-top:2%;
+  width: 450px;
   height: 160px;
   box-shadow: 5px 5px 5px #aaa;
   background-color: #f0f0f0;
@@ -110,8 +122,8 @@ header{
   border-bottom-left-radius: 2px;
 }
 .square3{
-  margin-top:5%;
-  width: 400px;
+  margin-top:2%;
+  width: 450px;
   height: 160px;
   box-shadow: 5px 5px 5px #aaa;
   background-color: #f0f0f0;
@@ -125,6 +137,18 @@ header{
   #plate{
     display:none;
   }
+  .square{
+    margin-top:5%
+  }
+  .square1{
+    margin-top:5%
+  }
+  .square2{
+    margin-top:5%
+  }
+  .square3{
+    margin-top:5%
+  }
 }
 
 #health{
@@ -134,4 +158,21 @@ header{
 #num{
   font-family: "Staatliches",cursive;
   font-size:40px;
+}
+
+@font-face{
+    font-family: 'pastpicture2';
+    src: url(../font/a옛날사진관2.ttf);
+  }
+
+@font-face{
+    font-family: 'pastpicture4';
+    src: url(../font/a옛날사진관4.ttf);
+}
+
+.title{
+  font-family: "pastpicture4",cursive;
+}
+.sogae{
+  font-family: "pastpicture2",cursive;
 }
