@@ -49,27 +49,37 @@
         kill=kill+1;
         if(kill==1){
         alert('나무가 죽었습니다! 죽인 나무 수 : '+kill+'그루\n'+'You killed '+kill+' Tree.');
+        document.getElementById("num").innerHTML = "Killed Tree: 1";
       }
       else{
         alert('나무가 죽었습니다! 죽인 나무 수 : '+kill+'그루\n'+'You killed '+kill+' Trees.');
+        document.getElementById("num").innerHTML = "Killed Tree: "+kill;
       }
     }
       else{
         hp=hp-1;
-        alert('HP : '+hp);
+        document.getElementById("health").innerHTML = "HP: "+hp;
       }
     }
     </script>
     <div class=Jua>
-     <h2>나무를 클릭해서 때리세요!<br>Click the Tree to attack!</h2>
-     <pan id="armor">[ 나무 갑옷 입히기 ]</span>
+     <h3>나무를 클릭해서 때리세요! Click the Tree to attack!</h3>
+     <span id="armor">[ 나무 갑옷 입히기 ]</span>&nbsp;&nbsp;&nbsp;<span id="fire">[ 불 지르기 ]</span>
      <script>
      armor.onclick = function(){
-       hp=100;
-       alert('나무가 갑옷을 입었습니다. 체력이 100으로 상승합니다.')
+       hp=50;
+       alert('나무가 갑옷을 입었습니다. 체력이 50으로 상승합니다.')
+     }
+     fire.onclick = function(){
+       hp=10;
+       alert('나무에 불이 붙어 나무 한 그루가 불에 타 죽었습니다.')
+       kill=kill+1;
+       document.getElementById("num").innerHTML = "Killed Tree: "+kill;
+       alert('나무가 죽었습니다! 죽인 나무 수 : '+kill+'그루\n'+'You killed '+kill+' Trees.');
      }
        </script>
     </div>
+    <br><div style="line-height:0.5em;"><p id="health"></p><p id="num"></p></div>
     <div class=mean>
       <br><br><br><h3>
         🏠<a href="./index.html" class='gomain'> Go To Main Site</a><br><br>

@@ -126,3 +126,12 @@ header{
     display:none;
   }
 }
+
+#health{
+  font-family: "Staatliches",cursive;
+  font-size: 40px;
+}
+#num{
+  font-family: "Staatliches",cursive;
+  font-size:40px;
+}
