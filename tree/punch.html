@@ -46,6 +46,7 @@
     tree.onclick = function(){
       if(hp==0){
         hp=10;
+        document.getElementById("health").innerHTML = "HP: "+hp;
         kill=kill+1;
         if(kill==1){
         alert('나무가 죽었습니다! 죽인 나무 수 : '+kill+'그루\n'+'You killed '+kill+' Tree.');
@@ -68,21 +69,25 @@
      <script>
      armor.onclick = function(){
        hp=50;
+       document.getElementById("health").innerHTML = "HP: "+hp;
        alert('나무가 갑옷을 입었습니다. 체력이 50으로 상승합니다.')
      }
      fire.onclick = function(){
+       document.getElementById("health").innerHTML = "HP: "+hp;
        if(kill==0)
        {
-       hp=10;
-       alert('나무에 불이 붙어 나무 한 그루가 불에 타 죽었습니다.')
+         alert('나무에 불이 붙어 나무 한 그루가 불에 타 죽었습니다.')
+         hp=10;
        kill=kill+1;
+       document.getElementById("health").innerHTML = "HP: "+hp;
        document.getElementById("num").innerHTML = "Killed Tree: "+kill;
        alert('나무가 죽었습니다! 죽인 나무 수 : '+kill+'그루\n'+'You killed '+kill+' Tree.');
      }
      else{
-       hp=10;
        alert('나무에 불이 붙어 나무 한 그루가 불에 타 죽었습니다.')
+       hp=10;
        kill=kill+1;
+       document.getElementById("health").innerHTML = "HP: "+hp;
        document.getElementById("num").innerHTML = "Killed Tree: "+kill;
        alert('나무가 죽었습니다! 죽인 나무 수 : '+kill+'그루\n'+'You killed '+kill+' Trees.');
      }
