@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STWS - SmallTree Web Service</title>
     <link rel="stylesheet" href="style1.css">
     <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Jua|Poor+Story|Yeon+Sung|Nanum+Gothic" rel="stylesheet">
@@ -21,15 +22,6 @@ function selectChangeEvent(track){
 }
 </script>
 <script type="text/javascript">
-
- if( /iPhone|iPad|iPod|BlackBerry|Android|Windows CE|LG|MOT|SAMSUNG|SonyEricsson|webOS|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-
-alert("모바일 환경에서 접속하셨습니다. 모바일 페이지는 아직 미구현 상태입니다. PC버전 페이지로 연결됩니다. 뿅");
-
- }
-
- else {
- }
  function printTime() {
  		var clock = document.getElementById("clock");
  		//id값인 <span>태그를 변수clock에 저장
@@ -67,9 +59,9 @@ alert("모바일 환경에서 접속하셨습니다. 모바일 페이지는 아�
           <p>
             <div class=mean style="line-height:0.5em;">
             <h2>🌳 SmallTree Web Service 🌳</h2>
-            비례식 및 퍼센트 계산기 페이지입니다.
+            비례식 및 비율<small>(백분율, 천분율)</small> 계산기 페이지입니다.
           </div>
-            <br><br><br><a id="display">
+            <br><br><h2 class=head>#비례식_계산기</h2><a id="display">
             <input type="text" id="num1" placeholder="A" size="10">&ensp;:&ensp;
             <input type="text" id="num2" placeholder="B" size="10">&ensp;=&ensp;
             <input type="text" id="num3" placeholder="C" size="10">
@@ -84,16 +76,34 @@ alert("모바일 환경에서 접속하셨습니다. 모바일 페이지는 아�
               function result(n1, n2, n3){
                 var res = (n2 * n3) / n1 ;
                 var text = n1+"&nbsp:&nbsp"+n2+"&nbsp=&nbsp"+n3+"&nbsp:&nbsp"+res;
-                display.innerHTML = text;
+                document.getElementById("result1").innerHTML = text;
               }
             }
             </script>
-            <div class=treemean>
-              <br><br><br><a href="index.html">메인으로 돌아가기
-                <br><small>Go To Main Site</small></a>
-              </div>
+            <p id="result1"></p>
+            <br><br><h2 class=head>#비율_계산기</h2>
+            <input type="text" id="bunja" placeholder="numerator" size="8">
+            <br><button id="biyul">÷</button><br>
+            <input type="text" id="bunmo" placeholder="denominator" size="10">
+            <script>
+            biyul.onclick = function(){
+              alert("계산이 완료되었습니다 :)\nCalculating Completed");
+              var n4 = bunja.value;
+              var n5 = bunmo.value;
+              result(bunja,bunmo);
+              function result(bunja,bunmo){
+                var res1 = n4 / n5 * 100;
+                var res2 = n4 / n5 * 1000;
+                var text1 = "백분율(퍼센트): "+res1+"%<br>천분율(퍼밀): "+res2+"<strong>‰</strong>";
+                document.getElementById("result2").innerHTML = text1;
+              }
+            }
+            </script>
+            <p id="result2"></p>
               <div class=mean>
-              <br><br><br><h3>🕐 Current Time:
+                <br><br><br><h3>
+                  🏠<a href="index.html" class='gomain'> Go To Main Site</a>
+                  <br><br><h3>🕐 Current Time:
                 <span id="clock"></span>
                 <br>🌐 STWS Version: Beta 0.1</h3>
           </p>

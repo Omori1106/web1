@@ -66,5 +66,19 @@ body{
 }
 @font-face{
     font-family: 'pastpicture4';
-    src: url(../font/a옛날사진관4.ttf);
+    src: url(font/a옛날사진관4.ttf);
+}
+@font-face{
+    font-family: 'pastpicture2';
+    src: url(font/a옛날사진관2.ttf);
+}
+.head{
+  font-family: 'pastpicture2',cursive;
+}
+
+#result1{
+  font-family: 'pastpicture4',cursive;
+}
+#result2{
+  font-family: 'pastpicture4',cursive;
 }
