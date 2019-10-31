@@ -43,6 +43,15 @@
       color: black;
       text-decoration: none;
     }
+    a:link.li{
+      text-decoration: none;
+    }
+    a:visited.li{
+      text-decoration: none;
+    }
+    a:hover.li{
+      text-decoration: none;
+    }
     .mean{
       font-family: 'Poor Story', cursive;
     }
@@ -53,6 +62,8 @@
   border-top: 1px solid white;
   margin:5px;
 }
+
+
 header{
   border-bottom: 1px solid lightgrey;
   font-family: 'do hyeon',cursive;
