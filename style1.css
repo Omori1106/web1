@@ -1,9 +1,9 @@
 body{
   margin:0;
-      background-image:url("jandi.jpg");
+      background-image:url("dotori.jpg");
       background-repeat: no-repeat;
       background-attachment: fixed;
-      background-position: center;
+      background-position: left;
       background-size: cover;
     }
     a:link.click{
@@ -11,12 +11,15 @@ body{
       text-decoration: none;
     }
     a:visited.click{
-      color: #de691e;
+      color: lightcoral;
       text-decoration: none;
     }
     a:hover.click{
       color: #ffa98f;
       text-decoration: none;
+    }
+    .click{
+      text-shadow: -1px 0 #F2F1F6, 0 1px #F2F1F6, 1px 0 #F2F1F6, 0 -1px #F2F1F6;
     }
     a:link.mail{
       color: black;

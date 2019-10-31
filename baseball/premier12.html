@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STWS - # Premier_12</title>
+    <link rel="stylesheet" href="../tree/style1.css">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Jua|Poor+Story|Yeon+Sung|Nanum+Gothic|Staatliches|Sawarabi+Gothic" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136329220-1"></script>
+<script type="text/javascript">
+
+ function printTime() {
+ 		var clock = document.getElementById("clock");
+ 		//id값인 <span>태그를 변수clock에 저장
+ 		var now = new Date();
+ 		//객체 생성
+
+ 		clock.innerHTML =
+ 			//태그내부에 태그 설정
+ 		now.getFullYear() + "년 " +
+ 		(now.getMonth() + 1) + "월 " +
+ 		now.getDate() + "일 " +
+ 		now.getHours() + "시 " +
+ 		now.getMinutes() + "분 " +
+ 		now.getSeconds() + "초";
+ 		setTimeout("printTime()", 1000);
+ 		//1초마다 printTime()함수 호출
+ 	}
+ 	window.onload = function() { //html 로딩시 콜백함수 호출
+ 		printTime();
+ 	}
+
+ </script>
+</head>
+  <body>
+    <header>
+       <a href="../baseball.html"><img class='toplogo' src="../stwstreeyagu.png" width=250px ></a>
+         <span style="float: right; margin-top:12px; margin-right:20px;">MENU</span>
+    </header>
+    <div style="height:70px"></div>
+    <div align="center">
+      <div class=aaa>
+        <img src="../premier.svg">
+        <div class=bbb>
+        </div>
+      <div class=ccc>
+        <p>글씨글씨</p>
+  </div>
+    <div class=mean>
+      <br><br><br><div class=ddd><h3>
+        🏠<a href="../index.html" class='gomain'> Go To Main Site</a><br><br>
+        🕐 Current Time:
+        <span id="clock"></span>
+        <br>🌐 STWS Version: Beta 0.1</h3></div>
+    </div>
+  </div>
+<footer>
+    <hr width=50%>Copyright 2019. <strong>omori</strong> all right reserved.
+    <br>Contact : <a href="mailto:smart_tomy@naver.com" class='mail'>smart_tomy@naver.com</a>
+  </div>
+</footer>
+  </body>
+</html>

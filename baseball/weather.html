@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STWS - # Tree_Punch</title>
+    <title>STWS - # Stadium_Weather</title>
     <link rel="stylesheet" href="../tree/style1.css">
     <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Jua|Poor+Story|Yeon+Sung|Nanum+Gothic|Staatliches|Sawarabi+Gothic" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -34,11 +34,18 @@
  </script>
 </head>
   <body>
-    <header>
-       <a href="../index.html"><img class='toplogo' src="../stwstreeyagu.png" width=250px ></a>
-         <span style="float: right; margin-top:12px; margin-right:10px;"
-         onclick="alert('KBO 9개 구장의 날씨를 알려드립니다.\n글자 클릭 시 네이버 검색 주소로 연결됩니다.\n추후 크롤링 시스템을 적용하여 페이지 내에 기상 정보를 표출할 예정입니다.')">HELP</span>
+    <header style="display:flex;">
+       <a href="../baseball.html"><img class='toplogo' src="../stwstreeyagu.png" width=250px ></a>
+       <ul id="main-menu" style="margin:0;list-style-type:none;">
+           <li style="float: right; margin-top:12px; margin-right:20px;"><a href="#" style="color:black;">MENU</a>
+         <ul id="sub-menu" style=padding:0;list-style-type:none;>
+         <li><a href="#" onclick="alert('준비중')" style="color:black;">HELP</a></li>
+         <li><a href="../index.html" style="color:black;">MAIN</a></li>
+       </ul>
+     </li>
+   </ul>
     </header>
+    <div style="height:70px"></div>
     <div align="center" >
       <div class=li>
     <ul class=title style="list-style-type:none; padding:0; font-size:30px; line-height:2em;">

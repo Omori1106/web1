@@ -1,4 +1,5 @@
-  a:link.click{
+
+ a:link.click{
       color: #de691e;
       text-decoration: none;
     }
@@ -62,12 +63,15 @@ header{
   background-color: white;
   padding-top:8px;
   top:0px;
+  left:0px;
+  padding-left:8px;
   border-bottom: 1px solid lightgrey;
   font-family: 'do hyeon',cursive;
   font-size: 20px;
   width:100%;
   z-index:999;
   position:fixed;
+  box-shadow: 0 .5px 2px 0 #777;
 }
  footer{
    text-align: center;
@@ -109,7 +113,11 @@ header{
   border-top-right-radius: 2px;
   border-bottom-left-radius: 2px;
 }
-
+div a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .square1{
   margin-top:5%;
   width: 450px;
@@ -190,4 +198,34 @@ header{
 }
 .sogae{
   font-family: "pastpicture2",cursive;
+}
+#main-meun li a{
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+#sub-menu{
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+#sub-menu li a{
+  text-decoration: none;
+  font-family: 'Do hyeon',cursive;
+}
+#main-menu li:hover #sub-menu{
+  opacity: 1;
+  visibility: visible;
+}
+
+.aaa{
+  position: relative;
+  opacity:0.2;
+}
+.bbb{
+  position: absolute;
+}
+.ccc{
+  position: relative;
+  margin: 0 auto;
 }
