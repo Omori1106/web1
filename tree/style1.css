@@ -43,13 +43,7 @@
       color: black;
       text-decoration: none;
     }
-    a:link.li{
-      text-decoration: none;
-    }
-    a:visited.li{
-      text-decoration: none;
-    }
-    a:hover.li{
+    a{
       text-decoration: none;
     }
     .mean{
@@ -65,9 +59,15 @@
 
 
 header{
+  background-color: white;
+  padding-top:8px;
+  top:0px;
   border-bottom: 1px solid lightgrey;
   font-family: 'do hyeon',cursive;
   font-size: 20px;
+  width:100%;
+  z-index:999;
+  position:fixed;
 }
  footer{
    text-align: center;
@@ -149,15 +149,19 @@ header{
     display:none;
   }
   .square{
+    height: 140px;
     margin-top:5%
   }
   .square1{
+    height: 140px;
     margin-top:5%
   }
   .square2{
+    height: 140px;
     margin-top:5%
   }
   .square3{
+    height: 140px;
     margin-top:5%
   }
 }
