@@ -34,32 +34,72 @@
  </script>
 </head>
   <body>
-    <header>
-       <a href="baseball.html" style="margin:0;"><img class='toplogo' src="stwstreeyagu.png" width=250px ></a>
-         <span style="float: right; margin-top:12px; margin-right:20px;"
-         onclick="alert('STWS의 Baseball 페이지입니다.')">HELP</span>
+    <header style="display:flex;">
+       <a href="sbaseball.html"><img class='toplogo' src="stwstreeyagu.png" width=250px ></a>
+         <div class="nav">
+           <a href="#"><span>#스텟_계산기</span></a>
+           <a href="baseball/weather.html"><span>#야구장_날씨</span></a>
+           <a href="baseball/premier12.html"><span>#프리미어_12</span></a>
+           <a href="#"><span>#기타_페이지</span></a>
+           <a href="index.html"><span>#STWS_메인</span></a>
+           <span></span>
+         </div>
+         <input type="checkbox" id="menuicon">
+         <label for="menuicon">
+           <span></span>
+           <span></span>
+           <span></span>
+         </label>
+         <div class="sidebar" align=center style="line-height:2.5em;">
+           <a href="#"><span>#스텟_계산기</span></a><br>
+           <a href="weather.html"><span>#야구장_날씨</span></a><br>
+           <a href="premier12.html"><span>#프리미어_12</span></a><br>
+           <a href="#"><span>#기타_페이지</span></a><br>
+           <a href="index.html"><span>#STWS_메인</span></a><br>
+         </div>
     </header>
     <div style="height:70px"></div>
     <div id=menu>
     <div style="display:flex; justify-content:space-around; flex-wrap: wrap; text-align:center;">
-    <div class=square><a class=none href="#">
-    <img src="calc.png" align="left" width=20% vspace="40" style=" margin-left:5%; padding-right:5%;">
+      <script>
+      function move(){
+        location.href="baseball/statcalc.html";
+      }
+      </script>
+    <div class=square onclick="move()" style="cursor:pointer;">
+    <img src="calc.png" align="left" width=20% vspace="35" style=" margin-left:5%; padding-right:5%;">
   <div class=title><h2>야구 스텟 계산기</h2></div><div class=sogae style="padding-right:5%;">
     타율, ERA, BB/K 등 야구의 여러 비율 스텟을 계산할 수 있는 웹 계산기 페이지입니다.
-</div></a></div>
-    <div class=square1><a class=none href="baseball/weather.html">
-    <img src="weather.png" align="left" width=20% vspace="40" style=" margin-left:5%; padding-right:5%;">
+</div></div>
+
+      <script>
+      function move1(){
+        location.href="baseball/weather.html";
+      }
+      </script>
+      <div class=square1 onclick="move1()" style="cursor:pointer;">
+    <img src="weather.png" align="left" width=20% style=" margin-left:5%; padding-right:5%; margin-top:35px;">
   <div class=title><h2>오늘의 야구장 날씨</h2></div><div class=sogae style="padding-right:5%;">KBO 9개 구장의 오늘 날씨를 알려주는 웹 페이지입니다.
-  </div></a>
+  </div>
 </div></div>
   <center><img id="plate" src="plate.png" width=10% style="margin-top:2%"></center>
   <div style="display:flex; justify-content:space-around; flex-wrap: wrap; text-align:center;">
-    <div class=square2><a class=none href="baseball/premier12.html">
-    <img src="premier.svg" align="left" width=30% vspace="35" style=" margin-left:5%; padding-right:5%;">
+    <script>
+    function move2(){
+      location.href="baseball/premier12.html";
+    }
+    </script>
+    <div class=square2 onclick="move2()" style="cursor:pointer;">
+    <img src="premier.svg" align="left" vspace="30" width=30% style="margin-left:5%; padding-right:5%; max-width:100%; max-height:100%;">
   <div class=title><h3>2019 WBSC 프리미어12</h3></div><div class=sogae style="padding-right:5%;">2019년 11월에 열리는 국제 야구 대항전인 WBSC 프리미어 12와 관련된 비공식 웹 페이지입니다.
   </div></a></div>
-    <div class=square3>
-    <img src="guitar.png" align="left" width=20% vspace="40" style=" margin-left:5%; padding-right:5%;">
+  <script>
+  function move3(){
+    location.href="baseball/etc.html";
+  }
+  </script>
+    <div class=square3 onclick="move3()" style="cursor:pointer;">
+    <img src="guitar.png" align="left" width=20% vspace="30" style=" margin-left:5%; padding-right:5%;">
   <div class=title><h2>기타 메뉴</h2></div><div class=sogae style="padding-right:5%;">기타 야구 관련 잡다한 내용들을 모은 웹 페이지입니다.</div>
   </div>
 </div>
