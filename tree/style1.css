@@ -1,9 +1,8 @@
-article{
-  background-image: url(../premier.svg);
-  opacity:1;
+body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  background-color: lavenderblush;
 }
  a:link.click{
       color: #de691e;
@@ -151,13 +150,12 @@ header .nav a:nth-child(5).on ~ span{
 .Jua{
   font-family: 'Jua', cursive;
 }
-
 .square{
   margin-top:5%;
   width: 450px;
   height: 160px;
   box-shadow: 5px 5px 5px #aaa;
-  background-color: #f0f0f0;
+  background-color: oldlace;
   border: 1px solid gainsboro;
   border-radius: 20px;
   border-top-right-radius: 2px;
@@ -168,7 +166,7 @@ header .nav a:nth-child(5).on ~ span{
   width: 450px;
   height: 160px;
   box-shadow: 5px 5px 5px #aaa;
-  background-color: #f0f0f0;
+  background-color: oldlace;
   border: 1px solid gainsboro;
   border-radius: 20px;
   border-top-right-radius: 2px;
@@ -179,7 +177,7 @@ header .nav a:nth-child(5).on ~ span{
   width: 450px;
   height: 160px;
   box-shadow: 5px 5px 5px #aaa;
-  background-color: #f0f0f0;
+  background-color: oldlace;
   border: 1px solid gainsboro;
   border-radius: 20px;
   border-top-right-radius: 2px;
@@ -190,7 +188,7 @@ header .nav a:nth-child(5).on ~ span{
   width: 450px;
   height: 160px;
   box-shadow: 5px 5px 5px #aaa;
-  background-color: #f0f0f0;
+  background-color: oldlace;
   border: 1px solid gainsboro;
   border-radius: 20px;
   border-top-right-radius: 2px;
@@ -256,6 +254,9 @@ header .nav a:nth-child(5).on ~ span{
     display:none;
     justify-content: space-between;
   }
+  .premier{
+    width:80%;
+  }
   .topdiv{
     height:70px;
   }
@@ -269,6 +270,7 @@ header .nav a:nth-child(5).on ~ span{
   i[class="xi-bars xi-2x"]{
     display:none;
   }
+
 }
 #health{
   font-family: "Staatliches",cursive;
@@ -283,7 +285,10 @@ header .nav a:nth-child(5).on ~ span{
     font-family: 'pastpicture2';
     src: url(../font/a옛날사진관2.ttf);
   }
-
+  @font-face{
+      font-family: 'pastpicture3';
+      src: url(../font/a옛날사진관3.ttf);
+    }
 @font-face{
     font-family: 'pastpicture4';
     src: url(../font/a옛날사진관4.ttf);
@@ -293,11 +298,12 @@ header .nav a:nth-child(5).on ~ span{
     src: url(../font/a시월구일1.ttf);
 }
 .title{
-  font-family: "pastpicture4",cursive;
+  font-family: "pastpicture3",cursive;
 }
 .sogae{
   font-family: "pastpicture2",cursive;
 }
+
 #main-meun li a{
   text-align: center;
   text-decoration: none;
