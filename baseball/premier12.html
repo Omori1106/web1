@@ -46,7 +46,26 @@
            <a href="../index.html"><span>#STWS_메인</span></a>
            <span></span>
          </div>
-         <i class="xi-bars xi-2x" style="color:dimgray; padding-top:5px;;padding-right:1%;"></i>
+         <nav>
+         <i class="xi-bars xi-2x" style="color:dimgray; padding-top:5px;;padding-right:1%;">
+         <ul class="submenu">
+           <li><a href="#">#스텟_계산기</a></li>
+           <li><a href="baseball/weather.html">#야구장_날씨</a></li>
+           <li><a href="baseball/premier12.html">#프리미어_12</a></li>
+           <li><a href="#">#기타_페이지</a></li>
+           <li><a href="index.html">#STWS_메인</a></li>
+         </ul>
+       </i>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $("nav > i").mouseenter(function(){
+          $(this).children(".submenu").stop().slideDown(400);
+        });
+        $("nav > i").mouseleave(function(){
+          $(this).children(".submenu").stop().slideUp(100);
+        });
+        </script>
+      </nav>
     </header>
     <div class=topdiv></div>
     <div align="center">
@@ -142,7 +161,7 @@
 </p>
 </details>
 </span><br><br>
-<br><h2 class=title>#역대_대회</h2>
+<h2 class=title>#역대_대회</h2>
 <span class=sogae><strong>[통산 기록]</strong><br>
 개최 횟수: 1회<small>(2015)</small>
 <br>최초 우승: 대한민국<small>(2015)</small>
@@ -151,18 +170,18 @@
   <details>
     <summary><strong>[2015년]</strong></summary>
   <p>
-    개최국: 대만, 일본<br>우승: 대한민국
+    개최국: 대만, 일본<br>우승: 대한민국 <small>(MVP: 김현수)</small><br>준우승: 미국
   </p>
 </details><br>
 <details>
   <summary><strong>[2019년]</strong></summary>
 <p>
-  개최국: 대만, 멕시코, 일본, 대한민국<br>우승: 안알랴줌
+  개최국: 대만, 멕시코, 일본, 대한민국<br>우승: 대한민국 V2 기원
 </p>
-</details>
+</details><br><br>
+<span class=title onclick="window.open('https://premier12.wbsc.org/en/2019')" style="cursor:pointer;"><h2>#공식_사이트_바로가기</h2></span>
 </span></div>
-    <div class=mean>
-      <br><br><br><div class=ddd><h3>
+    <div class=mean><h3>
         🕐 Current Time:
         <span id="clock"></span>
         <br>🌐 STWS Version: Beta 0.1</h3></div>

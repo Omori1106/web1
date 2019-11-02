@@ -59,47 +59,34 @@ function selectChangeEvent(track){
           <p>
             <div class=mean style="line-height:0.5em;">
             <h2>🌳 SmallTree Web Service 🌳</h2>
-            비례식 및 비율<small>(백분율, 천분율)</small> 계산기 페이지입니다.
+            로또 번호 6개를 뽑아보는 페이지입니다.<br><br><br>[주의] 같은 숫자가 중복해서 뜰 수도 있습니다.
           </div>
-            <br><br><h2 class=head>#비례식_계산기</h2><a id="display">
-            <input type="text" id="num1" placeholder="A" size="10">&ensp;:&ensp;
-            <input type="text" id="num2" placeholder="B" size="10">&ensp;=&ensp;
-            <input type="text" id="num3" placeholder="C" size="10">
-            <button id="action">:</button></a>
+            <br><br><h2 class=head onclick="random()" style='cursor:pointer;'>[클릭]</h2>
             <script>
-            action.onclick = function(){
-              alert("계산이 완료되었습니다 :)\nCalculating Completed");
-              var n1 = num1.value;
-              var n2 = num2.value;
-              var n3 = num3.value;
-              result(n1,n2,n3);
-              function result(n1, n2, n3){
-                var res = (n2 * n3) / n1 ;
-                var text = n1+"&nbsp:&nbsp"+n2+"&nbsp=&nbsp"+n3+"&nbsp:&nbsp"+res;
-                document.getElementById("result1").innerHTML = text;
+              var text1 = parseInt(Math.random()*45)+1;
+              var text2 = parseInt(Math.random()*45)+1;
+              var text3 = parseInt(Math.random()*45)+1;
+              var text4 = parseInt(Math.random()*45)+1;
+              var text5 = parseInt(Math.random()*45)+1;
+              var text6 = parseInt(Math.random()*45)+1;
+              function random(){
+                document.getElementById("fir").innerHTML = text1;
+                document.getElementById("sec").innerHTML = text2;
+                document.getElementById("thr").innerHTML = text3;
+                document.getElementById("fou").innerHTML = text4;
+                document.getElementById("fif").innerHTML = text5;
+                document.getElementById("six").innerHTML = text6;
               }
-            }
-            </script>
-            <p id="result1"></p>
-            <br><br><h2 class=head>#비율_계산기</h2>
-            <input type="text" id="bunja" placeholder="numerator" size="8">
-            <br><button id="biyul">÷</button><br>
-            <input type="text" id="bunmo" placeholder="denominator" size="10">
-            <script>
-            biyul.onclick = function(){
-              alert("계산이 완료되었습니다 :)\nCalculating Completed");
-              var n4 = bunja.value;
-              var n5 = bunmo.value;
-              result(bunja,bunmo);
-              function result(bunja,bunmo){
-                var res1 = n4 / n5 * 100;
-                var res2 = n4 / n5 * 1000;
-                var text1 = "백분율(퍼센트): "+res1+"%<br>천분율(퍼밀): "+res2+"<strong>‰</strong>";
-                document.getElementById("result2").innerHTML = text1;
-              }
-            }
-            </script>
-            <p id="result2"></p>
+          </script>
+          <div class=head>
+            <p id="fir"></p>
+            <p id="sec"></p>
+            <p id="thr"></p>
+            <p id="fou"></p>
+            <p id="fif"></p>
+            <p id="six"></p>
+            </div>
+            <h2 class=head onclick="location.href='lotto.html'" style='cursor:pointer;'>[새로고침]</h2>
               <div class=mean>
                 <br><br><br><h3>
                   🏠<a href="index.html" class='gomain'> Go To Main Site</a>
@@ -109,7 +96,7 @@ function selectChangeEvent(track){
           </p>
 
           <hr width=50%>Copyright 2019. <strong>omori</strong> all right reserved.
-          <br>Contact : <a href="mailto:smart_tomy@naver.com" class='mail'>smart_tomy@naver.com</a>
+          <br>Contact : <a href="mailto:smart_tomy@naver.com">smart_tomy@naver.com</a>
         </center>
     </div>
   </body>

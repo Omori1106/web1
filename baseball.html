@@ -36,7 +36,7 @@
 </head>
   <body>
     <header>
-       <a href="sbaseball.html"><img class='toplogo' src="stwstreeyagu.png" width=250px ></a>
+       <a href="baseball.html"><img class='toplogo' src="stwstreeyagu.png" width=250px ></a>
          <div class="nav">
            <a href="#"><span>#스텟_계산기</span></a>
            <a href="baseball/weather.html"><span>#야구장_날씨</span></a>
@@ -45,7 +45,26 @@
            <a href="index.html"><span>#STWS_메인</span></a>
            <span></span>
          </div>
-         <i class="xi-bars xi-2x" style="color:dimgray; padding-top:5px;;padding-right:1%;"></i>
+         <nav>
+         <i class="xi-bars xi-2x" style="color:dimgray; padding-top:5px;;padding-right:1%;">
+         <ul class="submenu">
+           <li><a href="#">#스텟_계산기</a></li>
+           <li><a href="baseball/weather.html">#야구장_날씨</a></li>
+           <li><a href="baseball/premier12.html">#프리미어_12</a></li>
+           <li><a href="#">#기타_페이지</a></li>
+           <li><a href="index.html">#STWS_메인</a></li>
+         </ul>
+       </i>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $("nav > i").mouseenter(function(){
+          $(this).children(".submenu").stop().slideDown(400);
+        });
+        $("nav > i").mouseleave(function(){
+          $(this).children(".submenu").stop().slideUp(100);
+        });
+        </script>
+      </nav>
     </header>
     <div class=topdiv></div>
     <div id=menu>
