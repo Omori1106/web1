@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STWS - # Stat_Calculator</title>
+    <link rel="stylesheet" href="../tree/style1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Jua|Poor+Story|Yeon+Sung|Nanum+Gothic|Staatliches|Sawarabi+Gothic" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136329220-1"></script>
+<script type="text/javascript">
+
+ function printTime() {
+ 		var clock = document.getElementById("clock");
+ 		//id값인 <span>태그를 변수clock에 저장
+ 		var now = new Date();
+ 		//객체 생성
+
+ 		clock.innerHTML =
+ 			//태그내부에 태그 설정
+ 		now.getFullYear() + "년 " +
+ 		(now.getMonth() + 1) + "월 " +
+ 		now.getDate() + "일 " +
+ 		now.getHours() + "시 " +
+ 		now.getMinutes() + "분 " +
+ 		now.getSeconds() + "초";
+ 		setTimeout("printTime()", 1000);
+ 		//1초마다 printTime()함수 호출
+ 	}
+ 	window.onload = function() { //html 로딩시 콜백함수 호출
+ 		printTime();
+ 	}
+ </script>
+</head>
+  <body>
+    <header>
+       <a href="../baseball.html"><img class='toplogo' src="../stwstreeyagu.png" width=250px ></a>
+       <div id="navi" class="nav">
+         <a href="calc.html" class=on><span>#스텟_계산기</span></a>
+         <a href="weather.html"><span>#야구장_날씨</span></a>
+         <a href="premier12.html"><span>#프리미어_12</span></a>
+         <a href="#"><span>#기타_페이지</span></a>
+         <a href="../index.html"><span>#STWS_메인</span></a>
+         <span id="line"></span>
+       </div>
+       <nav>
+       <i id="bars" class="xi-bars xi-2x" style="color:dimgray; padding-top:5px;padding-right:1%;">
+    <script>
+    bars.onclick = function(){
+      if(navi.style.display=="none"){
+        navi.style.display="flex";
+        navi.style.justifyContent="space-between";
+        navi.style.width="800px";
+        line.style.display="none";
+      }
+      else{
+        navi.style.display="none";
+      }
+    }
+    </script>
+  </i>
+    </nav>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  $("nav > i").mouseenter(function(){
+    $(this).children(".submenu").stop().slideDown(400);
+  });
+  $("nav > i").mouseleave(function(){
+    $(this).children(".submenu").stop().slideUp(100);
+  });
+  </script>
+    </header>
+    <div class=topdiv></div>
+    <div align="center" ><br>
+      <h1 class=title>#야구_스텟_계산기</h1><br>
+
+        <details>
+          <summary class=sogae>스텟 설명</summary>
+          <p class=sogae>
+            <strong>ERA</strong>: 9이닝 당 평균 자책점<br>
+            <strong>WHIP</strong>: 1이닝 당 안타+볼넷 허용률<br>
+            <strong>FIP</strong>: 수비 무관 평균 자책점<br>
+            <strong>K/9</strong>: 9이닝 당 평균 탈삼진<br>
+            <strong>BB/9</strong>: 9이닝 당 평균 볼넷<br>
+            <strong>K/BB</strong>: 볼넷 당 삼진 비율<br>
+            <strong>HR/9</strong>: 9이닝 당 평균 피홈런
+          </p>
+        </details>
+        <br><br><br><div style="display:flex; flex-wrap:wrap; justify-content:center;">
+          <img src="pitcher1.png" height="100px"><h2 class=sogae><span>#기록_입력하기</span></h2>
+        </div>
+            <details>
+              <summary class=sogae>필수 항목<sup><small>[ERA, WHIP]</small></sup></summary>
+            <p>
+              <input type="text" id="num1" placeholder="이닝" size="5">&ensp;
+              <input type="text" id="num2" placeholder="자책점" size="5">&ensp;
+              <input type="text" id="num3" placeholder="볼넷" size="5">&ensp;
+              <input type="text" id="num4" placeholder="피안타" size="5">
+            </p>
+          </details>
+          <details>
+            <summary class=sogae>선택 항목</summary>
+          <p>
+            <input type="text" id="num5" placeholder="탈삼진" size="5">&ensp;
+            <input type="text" id="num6" placeholder="고의4구" size="5">&ensp;
+            <input type="text" id="num7" placeholder="데드볼" size="5">&ensp;
+            <input type="text" id="num8" placeholder="피홈런" size="5">
+          </p>
+        </details><br><br><br>
+        <div style="display:flex; flex-wrap:wrap; justify-content:center;">
+          <img src="pitcher2.png" height="100px" style="margin-right:20px;"><h2 class=sogae><span>#기록_계산하기</span></h2>
+        </div>
+        <br><span class=sogae onclick="calc()" style="font-size:2em;"><strong>[계산하기]</strong></span>
+        <script>
+        function calc(){
+          res.style.display="inline";
+          alert("계산이 완료되었습니다 :)\nCalculating Completed");
+          var ip = parseInt(num1.value) || 0;
+          var er = parseInt(num2.value) || 0;
+          var bb = parseInt(num3.value) || 0;
+          var h = parseInt(num4.value) || 0;
+          var k = parseInt(num5.value) || 0;
+          var ibb = parseInt(num6.value) || 0;
+          var hbp = parseInt(num7.value) || 0;
+          var hr = parseInt(num8.value) || 0;
+          result(ip,er,bb,h,k,ibb,hbp,hr);
+          function result(ip,er,bb,h,k,ibb,hbp,hr){
+            var era = (9*er)/ip;
+            var whip = (bb+h)/ip;
+            var text1 = "<strong>ERA</strong>: "+era+"<br><strong>WHIP</strong>: "+whip;
+            var fip = (13*hr+3*(bb-ibb+hbp)-2*k)/ip + 3.20;
+            var k9 = k*9/ip;
+            var bb9 = bb*9/ip;
+            var kbb = k/bb;
+            var hr9 = hr*9/ip;
+            var text2 = "<strong>FIP</strong>: "+era+"<br><strong>K/9</strong>: "+k9+"<br><strong>BB/9</strong>: "+bb9+"<br><strong>K/BB</strong>: "+kbb+"<br><strong>HR/9</strong>: "+hr9;
+            document.getElementById("pilsu").innerHTML = text1;
+            document.getElementById("pilsu1").innerHTML = text2;
+          }
+        }
+        </script>
+        <br><br><details id="res" style="display:none;">
+          <summary class=sogae><strong>결과 보기</strong></summary>
+          <p>
+            <details>
+          <summary class=sogae>ERA, WHIP 보기</summary>
+          <p id="pilsu" class=sogae></p>
+        </details>
+        <details>
+          <summary class=sogae>기타 스텟 보기</summary>
+          <p id="pilsu1" class=sogae></p>
+        </details>
+      </p>
+    </details>
+    <div class=mean>
+      <br><br><br><h3>
+        🕐 Current Time:
+        <span id="clock"></span>
+        <br>🌐 STWS Version: Beta 0.1</h3>
+<footer>
+    <hr width=50%>Copyright 2019. <strong>omori</strong> all right reserved.
+    <br>Contact : <a href="mailto:smart_tomy@naver.com" class='mail'>smart_tomy@naver.com</a>
+  </div>
+</footer>
+</div>
+  </body>
+</html>

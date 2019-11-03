@@ -1,0 +1,13 @@
+body{
+  margin: 0;
+  background: url('../premier.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 50%;
+}
+@media(max-width:560px){
+  body{
+    background-size: 80%;
+  }
+}

@@ -91,8 +91,7 @@ header .nav{
   width:800px;
   display: flex;
   position: relative;
-  white-space: nowrap;
-  overflow-x: scroll;
+
 }
 header .nav a{
   flex:1; display: block; text-align: center;
@@ -226,7 +225,19 @@ nav{
     margin-top:5%
   }
 }
+.pic1{
+  margin-left: 250px;
+}
+.pic2{
+  margin-right: 250px;
+}
 @media(max-width:1122px){
+  .pic1{
+    margin-left: 50px;
+  }
+  .pic2{
+    margin-right: 50px;
+  }
   header .nav a span{
     font-size:15px;
   }
@@ -255,14 +266,28 @@ nav{
     width:500px;
   }
 
-  .topdiv{
-    height:127px;
+}
+@media(max-width:602px){
+  .pic1, .pic2{
+    margin: 0;
+  }
+  .pic1 img{
+    width:78px;
+    height:100px;
+  }
+  .pic2 img{
+    height:100px;
+  }
+  .pic1 h2, .pic2 h2{
+    font-size:15px;
   }
 }
 @media(max-width:560px){
   header .nav{
     display:none;
     justify-content: space-between;
+    white-space: nowrap;
+    overflow-x: scroll;
   }
   .premier{
     width:80%;
