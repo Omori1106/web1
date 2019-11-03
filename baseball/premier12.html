@@ -38,24 +38,31 @@
   <body>
     <header>
        <a href="../baseball.html"><img class='toplogo' src="../stwstreeyagu.png" width=250px ></a>
-         <div class="nav">
-           <a href="#"><span>#스텟_계산기</span></a>
-           <a href="weather.html"><span>#야구장_날씨</span></a>
-           <a href="premier12.html" class="on"><span>#프리미어_12</span></a>
-           <a href="#"><span>#기타_페이지</span></a>
-           <a href="../index.html"><span>#STWS_메인</span></a>
-           <span></span>
-         </div>
-         <nav>
-         <i class="xi-bars xi-2x" style="color:dimgray; padding-top:5px;;padding-right:1%;">
-         <ul class="submenu">
-           <li><a href="#">#스텟_계산기</a></li>
-           <li><a href="baseball/weather.html">#야구장_날씨</a></li>
-           <li><a href="baseball/premier12.html">#프리미어_12</a></li>
-           <li><a href="#">#기타_페이지</a></li>
-           <li><a href="index.html">#STWS_메인</a></li>
-         </ul>
-       </i>
+       <div id="navi" class="nav">
+         <strong>&nbsp;&nbsp;</strong><a href="#"><span>#스텟_계산기</span></a><strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+         <a href="weather.html"><span>#야구장_날씨</span></a><strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+         <a href="premier12.html" class=on><span>#프리미어_12</span></a><strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+         <a href="#"><span>#기타_페이지</span></a><strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+         <a href="../index.html"><span>#STWS_메인</span></a><strong>&nbsp;&nbsp;</strong>
+         <span id="line"></span>
+       </div>
+       <nav>
+       <i class="xi-bars xi-2x" style="color:dimgray; padding-top:5px;padding-right:1%;" onclick="view()">
+     </i>
+    <script>
+    function view(){
+      if(navi.style.display=="none"){
+        navi.style.display="flex";
+        navi.style.justifyContent="space-between";
+        navi.style.width="800px";
+        line.style.display="none";
+      }
+      else{
+        navi.style.display="none";
+      }
+    }
+    </script>
+    </nav>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
         $("nav > i").mouseenter(function(){
@@ -67,11 +74,10 @@
         </script>
       </nav>
     </header>
-    <div class=topdiv></div>
     <div align="center">
-  <br><br><br><div style="position:relative;"><img class=premier src="../premier.svg" style="opacity:0.1; margin-top:180px;"></div>
-  <div style="position:relative; top:-620px;">
-    <h2 class=title>#대회_소개</h2>
+  <br><br><br>
+  <div>
+    <br><h2 class=title>#대회_소개</h2>
   <span class=sogae>세계야구소프트볼연맹(WBSC)에서 주최하는 국제 야구 대항전으로, 세계 랭킹 상위 12개<sup onclick="alert('일본, 미국, 한국, 대만, 쿠바, 멕시코, 호주, 네덜란드, 베네수엘라, 캐나다, 푸에르토리코, 도미니카공화국')"><small>[목록]</small></sup>
   국이 참가하는 대회입니다.<br>2015년 첫 대회를 시작으로 4년에 한 번 개최됩니다.
 </span><br><br>
