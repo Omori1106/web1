@@ -73,10 +73,148 @@
     </header>
     <div class=topdiv></div>
     <div align="center" ><br>
-      <h1 class=title>#야구_스텟_계산기</h1><br><br><br>
-        <div style="display:flex; justify-content:space-around; flex-wrap:wrap;">
-    
+      <h1 class=title>#야구_스텟_계산기</h1><br>
+
+        <details>
+          <summary class=sogae>스텟 설명</summary>
+          <p class=sogae>
+            <strong>타율</strong>: 타수 당 안타<br>
+            <strong>출루율</strong>: 타석에서 출루할 확률<br>
+            <strong>장타율</strong>: 평균 루타 수<br>
+            <strong>OPS</strong>: 출루율+_장타율<br>
+            <strong>BB/K</strong>: 삼진 당 볼넷 비율<br>
+            <strong>BABIP</strong>: 인플레이된 타구 비율<br>
+            <strong>IsoP</strong>: 순장타율(장타율-타율)<br>
+            <strong>IsoD</strong>: 순출루율(출루율-타율)<br>
+            <strong>Spd</strong>: 스피드 스코어(주력 수치)
+          </p>
+        </details>
+        <br><br><br><div style="display:flex; flex-wrap:wrap; justify-content:center;">
+          <img src="batter1.png" height="100px"><h2 class=sogae><span>#기록_입력하기</span></h2>
         </div>
+            <details>
+              <summary class=sogae>필수 항목<sup><small>[타율]</small></sup></summary>
+            <p>
+              <input type="text" id="num1" placeholder="타수" size="5">&ensp;
+              <input type="text" id="num2" placeholder="안타" size="5">&ensp;
+            </p>
+          </details>
+          <details>
+            <summary class=sogae>선택 항목</summary>
+          <p>
+            <input type="text" id="num3" placeholder="볼넷" size="5">&ensp;
+            <input type="text" id="num4" placeholder="2루타" size="5">&ensp;
+            <input type="text" id="num5" placeholder="3루타" size="5">&ensp;
+            <input type="text" id="num6" placeholder="홈런" size="5">&ensp;
+            <input type="text" id="num7" placeholder="데드볼" size="5">&ensp;
+            <input type="text" id="num8" placeholder="희생플라이" size="5">&ensp;
+            <input type="text" id="num13" placeholder="삼진" size="5">
+          </p>
+          <details>
+            <summary class=sogae>주루 항목</summary>
+          <p>
+            <input type="text" id="num9" placeholder="도루성공" size="5">&ensp;
+            <input type="text" id="num10" placeholder="도루실패" size="5">&ensp;
+            <input type="text" id="num11" placeholder="병살타" size="5">&ensp;
+            <input type="text" id="num12" placeholder="득점" size="5">
+          </p>
+        </details>
+      </details><br><br><br>
+        <div style="display:flex; flex-wrap:wrap; justify-content:center;">
+          <img src="batter2.png" height="100px"><h2 class=sogae><span>#기록_계산하기</span></h2>
+        </div>
+        <br><span class=sogae onclick="calcu()" style="font-size:2em;"><strong>[계산하기]</strong></span>
+        <script>
+        function calcu(){
+          res.style.display="inline";
+          alert("계산이 완료되었습니다 :)\nCalculating Completed");
+          var ab = parseInt(num1.value) || 0;
+          var h = parseInt(num2.value) || 0;
+          var bb = parseInt(num3.value) || 0;
+          var dou = parseInt(num4.value) || 0;
+          var tri = parseInt(num5.value) || 0;
+          var hr = parseInt(num6.value) || 0;
+          var hbp = parseInt(num7.value) || 0;
+          var sf = parseInt(num8.value) || 0;
+          var sb = parseInt(num9.value) || 0;
+          var cs = parseInt(num10.value) || 0;
+          var gdp = parseInt(num11.value) || 0;
+          var r = parseInt(num12.value) || 0;
+          var k = parseInt(num13.value) || 0;
+          result(ab,h,bb,dou,tri,hr,hbp,sf,sb,cs,gdp,r,k);
+          function result(ab,h,bb,dou,tri,hr,hbp,sf,sb,cs,gdp,r,k){
+            var avg = h/ab;
+            var text1 = "<strong>타율</strong>: "+avg;
+            var obp = (h+bb+hbp)/(ab+bb+hbp+sf);
+            var one = h-dou-tri-hr;
+            var slg = (one+2*dou+3*tri+4*hr)/ab;
+            var ops = obp+slg;
+            var bbk = bb/k;
+            var isop = slg-avg;
+            var isod = obp-avg;
+            var text2 = "<strong>출루율</strong>: "+obp+"<br><strong>장타율</strong>: "+slg+"<br><strong>OPS</strong>: "+ops+"<br><strong>BB/K</strong>: "+bbk+"<br><br><strong>IsoP</strong>: "+isop+"<br><strong>IsoD</strong>: "+isod;
+            var sbtry = sb+cs;
+            var sbp = (sb/sbtry)*100;
+            var f1 = ((sb+3)/(sb+cs+7)-0.4)*20;
+            var f2 = ((sb+cs)/((h-dou-tri-hr)+bb+hbp))^0.5/0.07;
+            var f3 = tri/(ab-hr-k)/0.02*10;
+            var f4 = ((r-hr)/(h+bb-hr-hbp)-0.1)/0.04;
+            var f5 = (0.055-gdp/(ab-hr-k))/0.005;
+            var spd = (f1+f2+f3+f4+f5)/5;
+            if(f1<=0){
+              f1=0;
+            }
+            if(f2<=0){
+              f2=0;
+            }
+            if(f3<=0){
+              f3=0;
+            }
+            if(f4<=0){
+              f4=0;
+            }
+            if(f5<=10){
+              f5=0;
+            }
+            if(f1>=10){
+              f1=10;
+            }
+            if(f2>=10){
+              f2=10;
+            }
+            if(f3>=10){
+              f3=10;
+            }
+            if(f4>=10){
+              f4=10;
+            }
+            if(f5>=10){
+              f5=10;
+            }
+            var text3 = "<strong>도루 성공률</strong>: "+sbp+"%<br><strong>SPD</strong>: "+spd;
+            document.getElementById("pilsu").innerHTML = text1;
+            document.getElementById("pilsu1").innerHTML = text2;
+            document.getElementById("pilsu3").innerHTML = text3;
+          }
+        }
+        </script>
+        <br><br><details id="res" style="display:none;">
+          <summary class=sogae><strong>결과 보기</strong></summary>
+          <p>
+            <details>
+          <summary class=sogae>타율 보기</summary>
+          <p id="pilsu" class=sogae></p>
+        </details>
+        <details>
+          <summary class=sogae>기타 스텟 보기</summary>
+          <p id="pilsu1" class=sogae></p>
+          <details>
+            <summary class=sogae>주루 스텟 보기</summary>
+            <p id="pilsu3" class=sogae></p>
+          </p>
+        </details>
+      </p>
+    </details>
     <div class=mean>
       <br><br><br><h3>
         🕐 Current Time:
