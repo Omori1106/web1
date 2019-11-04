@@ -73,8 +73,8 @@
     </header>
     <div class=topdiv></div>
     <div align="center" ><br>
-      <h1 class=title>#야구_스텟_계산기</h1><br>
-
+      <h1 class=title>#야구_스텟_계산기_타자</h1><br>
+      <h3 class=sogae><a href="calcp.html" class=change>> 투수 스텟 계산하기 <</a></h3><br>
         <details>
           <summary class=sogae>스텟 설명</summary>
           <p class=sogae>
@@ -144,7 +144,7 @@
           result(ab,h,bb,dou,tri,hr,hbp,sf,sb,cs,gdp,r,k);
           function result(ab,h,bb,dou,tri,hr,hbp,sf,sb,cs,gdp,r,k){
             var avg = h/ab;
-            var text1 = "<strong>타율</strong>: "+avg;
+            var text1 = "<strong>타율</strong>: "+avg.toFixed(4);
             var obp = (h+bb+hbp)/(ab+bb+hbp+sf);
             var one = h-dou-tri-hr;
             var slg = (one+2*dou+3*tri+4*hr)/ab;
@@ -152,7 +152,7 @@
             var bbk = bb/k;
             var isop = slg-avg;
             var isod = obp-avg;
-            var text2 = "<strong>출루율</strong>: "+obp+"<br><strong>장타율</strong>: "+slg+"<br><strong>OPS</strong>: "+ops+"<br><strong>BB/K</strong>: "+bbk+"<br><br><strong>IsoP</strong>: "+isop+"<br><strong>IsoD</strong>: "+isod;
+            var text2 = "<strong>출루율</strong>: "+obp.toFixed(4)+"<br><strong>장타율</strong>: "+slg.toFixed(4)+"<br><strong>OPS</strong>: "+ops.toFixed(4)+"<br><strong>BB/K</strong>: "+bbk.toFixed(3)+"<br><br><strong>IsoP</strong>: "+isop.toFixed(4)+"<br><strong>IsoD</strong>: "+isod.toFixed(4);
             var sbtry = sb+cs;
             var sbp = (sb/sbtry)*100;
             var f1 = ((sb+3)/(sb+cs+7)-0.4)*20;
@@ -191,7 +191,7 @@
             if(f5>=10){
               f5=10;
             }
-            var text3 = "<strong>도루 성공률</strong>: "+sbp+"%<br><strong>SPD</strong>: "+spd;
+            var text3 = "<strong>도루 성공률</strong>: "+sbp.toFixed(3)+"%<br><strong>SPD</strong>: "+spd.toFixed(3);
             document.getElementById("pilsu").innerHTML = text1;
             document.getElementById("pilsu1").innerHTML = text2;
             document.getElementById("pilsu3").innerHTML = text3;
@@ -207,10 +207,12 @@
         </details>
         <details>
           <summary class=sogae>기타 스텟 보기</summary>
+          <p>
           <p id="pilsu1" class=sogae></p>
           <details>
             <summary class=sogae>주루 스텟 보기</summary>
             <p id="pilsu3" class=sogae></p>
+          </details>
           </p>
         </details>
       </p>
